@@ -1,0 +1,352 @@
+/* 全局样式 */
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --text-muted: #b0b0b0;
+    --accent-color: #007bff;
+    --max-width: 800px;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(42, 42, 42, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--text-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* 主要内容区域 */
+main {
+    padding-top: 76px;
+}
+
+.content-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* 首页Banner */
+.hero-section {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+/* 按钮样式 */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+}
+
+/* 章节样式 */
+.section {
+    padding: 5rem 0;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.section .lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bg-alt {
+    background-color: var(--primary-color);
+}
+
+/* 特性卡片 */
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+}
+
+/* 联系我们 */
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.contact-info strong {
+    color: var(--text-color);
+}
+
+/* 页脚 */
+footer {
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-content p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* 404页面样式 */
+.error-section {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.error-section h1 {
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.error-section h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* 隐私政策页面样式 */
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-content h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 2rem 0 1rem;
+}
+
+.policy-content p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.policy-content ul {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* 导航栏激活状态 */
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* 表格深色主题 */
+.policy-content .table {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+.policy-content .table th {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.policy-content .table td {
+    border-color: var(--border-color);
+}
+
+/* Tab样式 */
+.nav-tabs {
+    border-bottom-color: var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-muted);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--text-color);
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--accent-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.tab-content {
+    padding: 1rem 0;
+} 
