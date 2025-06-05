@@ -3,31 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - NaviTerm</title>
+    <title   data-i18n="privacyPolicy">NaviTerm Privacy Policy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        // 添加语言切换事件监听
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-lang]').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    localStorage.setItem('preferredLanguage', lang);
+                    location.reload();
+                });
+            });
+            
+            // 从URL参数获取语言或从localStorage读取
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            const savedLang = langParam || localStorage.getItem('preferredLanguage') || 'en';
+            
+            // 保存当前语言
+            localStorage.setItem('preferredLanguage', savedLang);
+            
+            // 设置tab显示
+            const tabToShow = savedLang === 'en' ? '#english' : '#chinese';
+            const tabButtonToActivate = savedLang === 'en' ? '#english-tab' : '#chinese-tab';
+            
+            document.querySelector(tabButtonToActivate).classList.add('active');
+            document.querySelector(tabToShow).classList.add('show', 'active');
+            
+            // 隐藏另一个tab
+            const tabToHide = savedLang === 'en' ? '#chinese' : '#english';
+            const tabButtonToDeactivate = savedLang === 'en' ? '#chinese-tab' : '#english-tab';
+            document.querySelector(tabButtonToDeactivate).classList.remove('active');
+            document.querySelector(tabToHide).classList.remove('show', 'active');
+        });
+    </script>
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">NaviTerm</a>
+            <a class="navbar-brand" href="index.html">Trivix Tech</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">首页</a>
+                    <li class="nav-item dropdown ms-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="zh">中文</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">关于我们</a>
+                        <a class="nav-link" href="index.html#home" data-i18n="navHome">首页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#services">业务范围</a>
+                        <a class="nav-link" href="index.html#about" data-i18n="navAbout">关于我们</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">联系我们</a>
+                        <a class="nav-link" href="index.html#services" data-i18n="navServices">业务范围</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact" data-i18n="navContact">联系我们</a>
                     </li>
                 </ul>
             </div>
@@ -151,7 +194,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p>&copy; 2025 武汉特维克斯科技有限公司. All rights reserved.</p>
+                    <p data-i18n="footerCopyright">&copy; 2025 武汉特维克斯科技有限公司. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -159,5 +202,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
