@@ -196,6 +196,7 @@ footer {
     background-color: var(--primary-color);
     padding: 2rem 0;
     margin-top: 4rem;
+    text-align: center;
 }
 
 .footer-content {
