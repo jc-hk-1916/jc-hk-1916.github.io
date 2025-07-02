@@ -471,8 +471,23 @@ footer {
     }
 
     .footer-content p {
-        font-size: 0.9rem;
-        line-height: 1.4;
+        font-size: 0.8rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+    }
+
+    /* 确保版权信息在移动端保持一行 */
+    footer p {
+        font-size: 0.8rem !important;
+        line-height: 1.3;
+        word-spacing: -0.05em;
+        letter-spacing: -0.02em;
+    }
+
+    /* 隐私政策链接优化 */
+    footer a {
+        font-size: 0.8rem;
+        white-space: nowrap;
     }
 }
 
@@ -549,6 +564,53 @@ footer {
     .nav-link {
         font-size: 0.95rem;
     }
+
+    /* 页脚进一步优化 */
+    footer p {
+        font-size: 0.75rem !important;
+        line-height: 1.2;
+        word-spacing: -0.1em;
+        letter-spacing: -0.03em;
+    }
+
+    footer a {
+        font-size: 0.75rem;
+    }
+
+    /* 隐私政策标题进一步优化 */
+    .policy-content h1,
+    .mobile-compact-title {
+        font-size: 0.95rem !important;
+        line-height: 0.9;
+        word-spacing: -0.2em;
+        letter-spacing: -0.1em;
+        transform: scale(0.9);
+        transform-origin: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    /* 联系信息进一步优化 */
+    .contact-info p,
+    .mobile-compact-text {
+        font-size: 0.75rem;
+        line-height: 1.1;
+        word-spacing: -0.12em;
+        letter-spacing: -0.06em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transform: scale(0.95);
+        transform-origin: left center;
+    }
+
+    .contact-info strong {
+        font-size: 0.7rem;
+        display: inline-block;
+        white-space: nowrap;
+    }
 }
 
 /* 超小屏幕 (最大宽度 375px) */
@@ -572,6 +634,55 @@ footer {
     .btn {
         padding: 0.875rem 1rem;
         font-size: 0.9rem;
+    }
+
+    /* 页脚超小屏幕优化 */
+    footer p {
+        font-size: 0.7rem !important;
+        line-height: 1.1;
+        word-spacing: -0.15em;
+        letter-spacing: -0.05em;
+    }
+
+    footer a {
+        font-size: 0.7rem;
+    }
+
+    /* 隐私政策标题超小屏幕优化 */
+    .policy-content h1,
+    .mobile-compact-title {
+        font-size: 0.8rem !important;
+        line-height: 0.85;
+        word-spacing: -0.25em;
+        letter-spacing: -0.12em;
+        margin-bottom: 1rem;
+        transform: scale(0.85);
+        transform-origin: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    /* 联系信息超小屏幕优化 */
+    .contact-info p,
+    .mobile-compact-text {
+        font-size: 0.65rem;
+        line-height: 1.0;
+        word-spacing: -0.18em;
+        letter-spacing: -0.1em;
+        transform: scale(0.9);
+        transform-origin: left center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .contact-info strong {
+        font-size: 0.6rem;
+        display: inline-block;
+        white-space: nowrap;
     }
 }
 
@@ -628,6 +739,16 @@ footer {
 .policy-content {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.policy-content h1 {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    /* 为移动端准备的基础样式 */
+    word-break: keep-all;
+    overflow-wrap: normal;
 }
 
 .policy-content h2 {
@@ -759,6 +880,40 @@ footer {
         min-height: 44px;
         padding: 0.75rem;
         font-size: 16px; /* 防止iOS缩放 */
+    }
+
+    /* 隐私政策页面移动端优化 */
+    .policy-content h1,
+    .mobile-compact-title {
+        font-size: 1.1rem !important;
+        line-height: 0.95;
+        margin-bottom: 1.5rem;
+        word-spacing: -0.15em;
+        letter-spacing: -0.08em;
+        transform: scale(0.95);
+        transform-origin: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    /* 联系信息移动端优化 */
+    .contact-info p,
+    .mobile-compact-text {
+        font-size: 0.85rem;
+        line-height: 1.2;
+        margin-bottom: 0.6rem;
+        word-spacing: -0.08em;
+        letter-spacing: -0.03em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .contact-info strong {
+        font-size: 0.8rem;
+        white-space: nowrap;
     }
 }
 
