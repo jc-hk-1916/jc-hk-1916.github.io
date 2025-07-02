@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title data-i18n="privacyPolicy">NaviTerm Privacy Policy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // 添加语言切换事件监听
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-lang]').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    localStorage.setItem('preferredLanguage', lang);
+                    location.reload();
+                });
+            });
+            
+            // 从URL参数获取语言或从localStorage读取
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            const savedLang = langParam || localStorage.getItem('preferredLanguage') || 'en';
+            
+            // 保存当前语言
+            localStorage.setItem('preferredLanguage', savedLang);
+            
+            // 设置tab显示
+            const tabToShow = savedLang === 'en' ? '#english' : '#chinese';
+            const tabButtonToActivate = savedLang === 'en' ? '#english-tab' : '#chinese-tab';
+            
+            document.querySelector(tabButtonToActivate).classList.add('active');
+            document.querySelector(tabToShow).classList.add('show', 'active');
+            
+            // 隐藏另一个tab
+            const tabToHide = savedLang === 'en' ? '#chinese' : '#english';
+            const tabButtonToDeactivate = savedLang === 'en' ? '#chinese-tab' : '#english-tab';
+            document.querySelector(tabButtonToDeactivate).classList.remove('active');
+            document.querySelector(tabToHide).classList.remove('show', 'active');
+        });
+    </script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Trivix Tech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown ms-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="zh">中文</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home" data-i18n="navHome">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about" data-i18n="navAbout">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services" data-i18n="navServices">业务范围</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact" data-i18n="navContact">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="policy-content">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">NaviTerm Privacy Policy / 隐私政策</h1>
+
+            <!-- Tab导航 -->
+            <ul class="nav nav-tabs mb-4" id="privacyTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="english-tab" data-bs-toggle="tab" data-bs-target="#english" type="button" role="tab" aria-controls="english" aria-selected="true">English</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="chinese-tab" data-bs-toggle="tab" data-bs-target="#chinese" type="button" role="tab" aria-controls="chinese" aria-selected="false">中文</button>
+                </li>
+            </ul>
+
+            <!-- Tab内容 -->
+            <!-- 保留原页面结构，只替换主要内容部分 -->
+
+<!-- Tab内容 -->
+<div class="tab-content" id="privacyTabContent">
+    <!-- 英文版本 -->
+    <div class="tab-pane fade show active" id="english" role="tabpanel" aria-labelledby="english-tab">
+        <div>
+            <h2>🛡️ NaviTerm App Privacy Policy (App Store Version)</h2>
+            <p><strong>Effective Date:</strong> June 1, 2025</p>
+
+            <h3>1. What Information We Collect</h3>
+            <p>NaviTerm does <strong>not collect, store, or transmit</strong> any personally identifiable information. All features, including subscription validation, are handled securely via Apple’s StoreKit and are processed locally on the device.</p>
+
+            <h3>2. Subscription Validation</h3>
+            <p>NaviTerm checks the user’s subscription status using StoreKit APIs on the device. No user data or receipts are uploaded to any external server.</p>
+
+            <h3>3. Local Data</h3>
+            <p>SSH keys, connection profiles, and user-configured settings are stored locally on your device and never leave your device.</p>
+
+            <h3>4. Third-Party Services</h3>
+            <p>This app does <strong>not use</strong> any third-party analytics, advertising, or cloud services. There is no tracking, logging, or remote syncing involved.</p>
+
+            <h3>5. Your Rights</h3>
+            <p>Since no data is collected or stored externally, there is no data to request, modify, or delete.</p>
+
+            <h3>6. Contact</h3>
+            <p>If you have any questions about this privacy policy, feel free to contact us at: <a href="mailto:support@trivix.cn">support@trivix.cn</a></p>
+        </div>
+    </div>
+
+    <!-- 中文版本 -->
+    <div class="tab-pane fade" id="chinese" role="tabpanel" aria-labelledby="chinese-tab">
+        <div>
+            <h2>🛡️ NaviTerm 应用隐私政策（App Store 版本）</h2>
+            <p><strong>生效日期：</strong>2025年6月1日</p>
+
+            <h3>1. 我们收集哪些信息</h3>
+            <p>NaviTerm <strong>不会收集、存储或传输</strong>任何可识别用户身份的信息。包括订阅校验在内的所有功能均通过 Apple 的 StoreKit 在设备本地处理。</p>
+
+            <h3>2. 订阅验证</h3>
+            <p>应用使用 StoreKit 接口在本地验证用户的订阅状态。不上传用户数据或收据信息到任何第三方服务器。</p>
+
+            <h3>3. 本地数据</h3>
+            <p>SSH 密钥、主机配置等用户数据仅保存在用户设备上，从不上传至云端。</p>
+
+            <h3>4. 第三方服务</h3>
+            <p>本应用<strong>未接入</strong>任何第三方统计、广告或云服务。不包含追踪、不记录日志、不进行远程同步。</p>
+
+            <h3>5. 用户权利</h3>
+            <p>由于我们不收集任何数据，用户无须担心数据访问、更改或删除问题。</p>
+
+            <h3>6. 联系我们</h3>
+            <p>如果您对本隐私政策有任何疑问，请发送邮件至：<a href="mailto:support@trivix.cn">support@trivix.cn</a></p>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p data-i18n="footerCopyright">© 2025 武汉特维克斯科技有限公司. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>

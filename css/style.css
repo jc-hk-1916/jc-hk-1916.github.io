@@ -1,0 +1,1108 @@
+/* 全局样式 */
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --text-muted: #b0b0b0;
+    --accent-color: #007bff;
+    --max-width: 800px;
+    --vh: 1vh; /* 动态视口高度 */
+    --safe-area-inset-top: env(safe-area-inset-top);
+    --safe-area-inset-right: env(safe-area-inset-right);
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    --safe-area-inset-left: env(safe-area-inset-left);
+}
+
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    /* 改善移动端滚动性能 */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    /* 支持安全区域 */
+    padding-left: var(--safe-area-inset-left);
+    padding-right: var(--safe-area-inset-right);
+}
+
+/* 移动端性能优化 */
+* {
+    /* 减少重绘和回流 */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* 改善文本渲染 */
+body, .btn, .nav-link {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(42, 42, 42, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--text-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* 自定义汉堡菜单图标 */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon {
+    background-color: var(--text-color);
+    height: 2px;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-toggler-icon::before {
+    top: -6px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -6px;
+}
+
+/* 汉堡菜单动画 */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* 主要内容区域 */
+main {
+    padding-top: 76px;
+}
+
+.content-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* 首页Banner */
+.hero-section {
+    min-height: calc(var(--vh, 1vh) * 100 - 76px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+    /* 支持安全区域 */
+    padding-top: max(4rem, var(--safe-area-inset-top));
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+/* 按钮样式 */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+}
+
+/* 章节样式 */
+.section {
+    padding: 5rem 0;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.section .lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bg-alt {
+    background-color: var(--primary-color);
+}
+
+/* 特性卡片 */
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+}
+
+/* 联系我们 */
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.contact-info strong {
+    color: var(--text-color);
+}
+
+/* 页脚 */
+footer {
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-content p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 响应式调整 */
+
+/* 大平板 (768px - 991px) */
+@media (max-width: 991px) {
+    .content-wrapper {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+}
+
+/* 小平板和大手机 (576px - 767px) */
+@media (max-width: 767px) {
+    /* 导航栏优化 */
+    .navbar {
+        padding: 0.75rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-collapse {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-item {
+        margin: 0.25rem 0;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* 主要内容调整 */
+    main {
+        padding-top: 70px;
+    }
+
+    .content-wrapper {
+        padding: 1.5rem 0.75rem;
+    }
+
+    /* Hero区域优化 */
+    .hero-section {
+        min-height: calc(100vh - 70px);
+        padding: 2rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+    }
+
+    .hero-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero-section .lead {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+
+    /* 按钮优化 */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+        min-height: 48px; /* 确保触摸目标足够大 */
+    }
+
+    /* 章节标题优化 */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .section .lead {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    /* 特性卡片优化 */
+    .feature-card {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+    }
+
+    .feature-card p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    /* 联系信息优化 */
+    .contact-info p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+    }
+
+    /* 页脚优化 */
+    footer {
+        padding: 1.5rem 0;
+        margin-top: 3rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+/* 小手机 (最大宽度 575px) */
+@media (max-width: 575px) {
+    /* 进一步优化小屏幕 */
+    .content-wrapper {
+        padding: 1rem 0.5rem;
+    }
+
+    /* Hero区域进一步优化 */
+    .hero-section {
+        padding: 1.5rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 按钮进一步优化 */
+    .btn {
+        max-width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    /* 章节进一步优化 */
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    .section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .section .lead {
+        font-size: 1rem;
+    }
+
+    /* 特性卡片进一步优化 */
+    .feature-card {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .feature-card i {
+        font-size: 1.75rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    /* 导航栏进一步优化 */
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+    }
+}
+
+/* 超小屏幕 (最大宽度 375px) */
+@media (max-width: 375px) {
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 1rem 0.5rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .lead {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+}
+
+/* 404页面样式 */
+.error-section {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.error-section h1 {
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.error-section h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* 隐私政策页面样式 */
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-content h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 2rem 0 1rem;
+}
+
+.policy-content p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.policy-content ul {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* 导航栏激活状态 */
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* 移动端触摸优化 */
+@media (hover: none) and (pointer: coarse) {
+    /* 移除hover效果，使用更适合触摸的交互 */
+    .feature-card:hover {
+        transform: none;
+    }
+
+    .feature-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    .nav-link:hover {
+        background-color: transparent;
+    }
+
+    .nav-link:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* 确保所有可点击元素有足够的触摸目标 */
+@media (max-width: 767px) {
+    .navbar-toggler {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown-item {
+        padding: 0.75rem 1rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* 改进语言切换下拉菜单 */
+    .dropdown-menu {
+        min-width: 120px;
+        border: none;
+        background-color: var(--primary-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .dropdown-item {
+        color: var(--text-color);
+        transition: background-color 0.2s ease;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--text-color);
+    }
+
+    .dropdown-item.active {
+        background-color: var(--accent-color);
+        color: white;
+    }
+}
+
+/* 移动端文本可读性优化 */
+@media (max-width: 767px) {
+    /* 确保文本有足够的对比度和可读性 */
+    p, .lead {
+        line-height: 1.5;
+        word-spacing: 0.1em;
+    }
+
+    /* 改善链接的可访问性 */
+    a {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+    }
+
+    .btn, .nav-link {
+        text-decoration: none;
+    }
+
+    /* 改善焦点状态的可见性 */
+    .btn:focus,
+    .nav-link:focus,
+    .dropdown-item:focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+    }
+
+    /* 改善表单元素（如果有的话） */
+    input, textarea, select {
+        min-height: 44px;
+        padding: 0.75rem;
+        font-size: 16px; /* 防止iOS缩放 */
+    }
+}
+
+/* 改善加载性能的CSS */
+.feature-card,
+.btn,
+.nav-link {
+    will-change: transform;
+}
+
+/* 移动端特定的动画优化 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 深色模式支持（如果系统偏好深色模式） */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #2a2a2a;
+        --secondary-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --text-muted: #b0b0b0;
+    }
+}
+
+/* 表格深色主题 */
+.policy-content .table {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+.policy-content .table th {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.policy-content .table td {
+    border-color: var(--border-color);
+}
+
+/* Tab样式 */
+.nav-tabs {
+    border-bottom-color: var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-muted);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--text-color);
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--accent-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.tab-content {
+    padding: 1rem 0;
+}
+
+/* 移动端额外优化 */
+
+/* 懒加载图片样式 */
+img.lazy {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img.lazy.loaded {
+    opacity: 1;
+}
+
+/* 加载状态指示器 */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--accent-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 触摸反馈增强 */
+.touch-feedback {
+    position: relative;
+    overflow: hidden;
+}
+
+.touch-feedback::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.touch-feedback:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* iOS Safari 特定优化 */
+@supports (-webkit-touch-callout: none) {
+    .hero-section {
+        min-height: calc(var(--vh, 1vh) * 100 - 76px);
+    }
+
+    /* 修复iOS Safari的100vh问题 */
+    .hero-section,
+    .error-section {
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* 网络连接优化 */
+@media (prefers-reduced-data: reduce) {
+    /* 在低数据模式下减少动画和效果 */
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .feature-card:hover {
+        transform: none;
+    }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    :root {
+        --text-color: #ffffff;
+        --text-muted: #cccccc;
+        --primary-color: #000000;
+        --secondary-color: #000000;
+    }
+
+    .btn-outline {
+        border-width: 3px;
+    }
+
+    .nav-link:focus,
+    .btn:focus {
+        outline: 3px solid var(--accent-color);
+        outline-offset: 2px;
+    }
+}
+
+/* 强制深色模式（用户偏好） */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #2a2a2a;
+        --secondary-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --text-muted: #b0b0b0;
+    }
+}
+
+/* 移动端键盘适配 */
+@media (max-width: 767px) {
+    /* 当虚拟键盘出现时的适配 */
+    .keyboard-open {
+        height: calc(var(--vh, 1vh) * 100);
+        overflow: hidden;
+    }
+
+    /* 改善移动端表单体验 */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 16px; /* 防止iOS缩放 */
+        border-radius: 8px;
+        border: 2px solid var(--text-muted);
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: 12px 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: var(--accent-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+}
+
+/* 移动端导航栏安全区域适配 */
+@media (max-width: 767px) {
+    .navbar {
+        padding-top: max(0.75rem, var(--safe-area-inset-top));
+        padding-left: max(1rem, var(--safe-area-inset-left));
+        padding-right: max(1rem, var(--safe-area-inset-right));
+    }
+
+    .container {
+        padding-left: max(15px, var(--safe-area-inset-left));
+        padding-right: max(15px, var(--safe-area-inset-right));
+    }
+}
+
+/* 移动端滚动条优化 */
+@media (max-width: 767px) {
+    /* 隐藏滚动条但保持功能 */
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
+    /* 为支持的浏览器提供细滚动条 */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-color) transparent;
+    }
+}
+
+/* 移动端性能优化 */
+@media (max-width: 767px) {
+    /* GPU加速关键元素 */
+    .navbar,
+    .hero-section,
+    .feature-card,
+    .btn {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
+    /* 优化重绘区域 */
+    .navbar-collapse {
+        contain: layout style paint;
+    }
+
+    /* 减少复杂选择器的使用 */
+    .nav-item,
+    .feature-card,
+    .btn {
+        contain: layout;
+    }
+}
+
+/* PWA安装横幅样式 */
+.pwa-install-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1050;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    /* 支持安全区域 */
+    padding-bottom: max(1rem, var(--safe-area-inset-bottom));
+    padding-left: max(1rem, var(--safe-area-inset-left));
+    padding-right: max(1rem, var(--safe-area-inset-right));
+}
+
+.pwa-install-banner[style*="block"] {
+    transform: translateY(0);
+}
+
+.pwa-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.pwa-banner-text {
+    flex: 1;
+}
+
+.pwa-banner-text strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.pwa-banner-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.pwa-banner-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.pwa-banner-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    min-height: auto;
+    white-space: nowrap;
+}
+
+/* 移动端PWA横幅优化 */
+@media (max-width: 575px) {
+    .pwa-banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .pwa-banner-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pwa-banner-actions .btn {
+        flex: 1;
+        max-width: 120px;
+    }
+}
