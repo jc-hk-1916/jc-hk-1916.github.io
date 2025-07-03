@@ -28,7 +28,22 @@ const translations = {
         pwaInstallTitle: "Install App",
         pwaInstallDesc: "Add to home screen for a better experience",
         pwaInstallBtn: "Install",
-        pwaDismissBtn: "Later"
+        pwaDismissBtn: "Later",
+        downloadNaviTerm: "Download NaviTerm",
+        productTitle: "Our Product",
+        navitermTitle: "NaviTerm - Professional SSH & SFTP Client",
+        navitermSubtitle: "Professional SSH & SFTP Client",
+        navitermDesc: "A powerful SSH and SFTP client for Apple devices, providing secure and streamlined remote access solutions for developers, system administrators, and network engineers.",
+        keyFeatures: "Key Features:",
+        feature1: "SSH Terminal Access - Securely connect to remote servers",
+        feature2: "SFTP File Management - Browse and manage remote file systems",
+        feature3: "Port Forwarding - Set up proxies and access internal environments via SSH tunnels",
+        feature4: "Key Management - Support for RSA, ED25519 and other key formats",
+        feature5: "Multi-Device Experience - Optimized for Mac, iPhone, and iPad",
+        feature6: "Session Management - Save server configurations for quick reconnection",
+        availableOn: "Available on:",
+        freeVersion: "Free version supports up to 5 hosts with full feature access",
+        downloadOnAppStore: "Download on the App Store"
     },
     zh: {
         title: "Trivix Tech",
@@ -59,7 +74,22 @@ const translations = {
         pwaInstallTitle: "安装应用",
         pwaInstallDesc: "添加到主屏幕，获得更好的体验",
         pwaInstallBtn: "安装",
-        pwaDismissBtn: "稍后"
+        pwaDismissBtn: "稍后",
+        downloadNaviTerm: "下载NaviTerm",
+        productTitle: "我们的产品",
+        navitermTitle: "NaviTerm - 专业SSH和SFTP客户端",
+        navitermSubtitle: "专业SSH和SFTP客户端",
+        navitermDesc: "适用于所有Apple设备的强大SSH和SFTP客户端，为开发者、系统管理员和网络工程师提供安全高效的远程访问解决方案。",
+        keyFeatures: "核心功能：",
+        feature1: "SSH终端访问 - 安全连接远程服务器",
+        feature2: "SFTP文件管理 - 浏览和管理远程文件系统",
+        feature3: "端口转发 - 通过SSH隧道设置代理和访问内部环境",
+        feature4: "密钥管理 - 支持RSA、ED25519等多种密钥格式",
+        feature5: "多设备体验 - 完美适配Mac、iPhone和iPad",
+        feature6: "会话管理 - 保存常用服务器配置，快速重连",
+        availableOn: "支持平台：",
+        freeVersion: "免费版本支持管理最多5个主机，享受完整功能",
+        downloadOnAppStore: "在App Store下载"
     }
 };
 

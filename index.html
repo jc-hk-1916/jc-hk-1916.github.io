@@ -75,33 +75,66 @@
 
     <!-- 主要内容区域 -->
     <main>
-        <!-- 首页Banner -->
+        <!-- 首页Banner - 产品展示 -->
         <section id="home" class="hero-section">
             <div class="container">
                 <div class="content-wrapper">
-                    <h1 data-i18n="title">Trivix Tech</h1>
-                    <h2 data-i18n="subtitle">武汉特维克斯科技有限公司</h2>
-                    <p class="lead" data-i18n="tagline">专注于工具软件开发、应用软件开发和技术服务</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary" data-i18n="contactBtn">Contact Us</a>
-                        <a href="#services" class="btn btn-outline" data-i18n="learnMoreBtn">Learn More</a>
+                    <div class="hero-product-showcase">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="hero-product-info">
+                                    <div class="hero-product-title">
+                                        <h1 class="hero-main-title">NaviTerm</h1>
+                                        <h2 class="hero-sub-title" data-i18n="navitermSubtitle">专业SSH和SFTP客户端</h2>
+                                    </div>
+                                    <p class="hero-product-description" data-i18n="navitermDesc">
+                                        适用于所有Apple设备的强大SSH和SFTP客户端，为开发者、系统管理员和网络工程师提供安全高效的远程访问解决方案。
+                                    </p>
+
+                                    <div class="hero-platform-support">
+                                        <p><strong data-i18n="availableOn">支持平台：</strong></p>
+                                        <div class="hero-platform-icons">
+                                            <span class="hero-platform-icon">📱 iOS</span>
+                                            <span class="hero-platform-icon">💻 macOS</span>
+                                            <span class="hero-platform-icon">📟 iPad</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="hero-free-version" data-i18n="freeVersion">
+                                        免费版本支持管理最多5个主机，享受完整功能
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero-download-section">
+                                    <div class="hero-app-store-badge">
+                                        <a href="https://apps.apple.com/us/app/naviterm/id6747072398" target="_blank" rel="noopener noreferrer" class="hero-app-store-link">
+                                            <div class="hero-app-store-badge-official">
+                                                <div class="hero-apple-logo">
+                                                    <svg width="24" height="28" viewBox="0 0 20 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.365 12.83c0-3.778 3.06-5.594 3.195-5.69C18.29 5.02 16.547 4.1 14.747 4.08c-1.514-.153-2.95.89-3.718.89-.767 0-1.95-.87-3.206-.845C5.993 4.15 4.296 5.11 3.41 6.71c-1.8 3.12-.46 7.755 1.295 10.29.86 1.24 1.888 2.635 3.236 2.585 1.297-.05 1.787-.84 3.355-.84 1.568 0 2.009.84 3.206.815 1.324-.025 2.278-1.24 3.138-2.485.994-1.44 1.402-2.835 1.427-2.91-.031-.015-2.74-1.05-2.74-4.16l.038-.34zM13.547 2.83c.717-.87 1.203-2.08 1.071-3.28-1.036.04-2.29.69-3.032 1.56-.665.77-1.248 2-1.092 3.18 1.155.09 2.335-.585 3.053-1.46z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="hero-badge-text">
+                                                    <div class="hero-download-text-small">Download on the</div>
+                                                    <div class="hero-app-store-text-large">App Store</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="hero-cta-buttons">
+                                        <a href="#services" class="btn btn-outline" data-i18n="learnMoreBtn">了解更多</a>
+                                        <a href="#contact" class="btn btn-outline" data-i18n="contactBtn">联系我们</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 关于我们 -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="content-wrapper">
-                    <h2 data-i18n="aboutTitle">About Us</h2>
-                    <p class="lead" data-i18n="aboutContent">
-                        武汉特维克斯科技有限公司是一家专注于软件开发和技术服务的高新技术企业。
-                        我们致力于为客户提供专业的软件开发解决方案，包括工具软件开发、应用软件开发以及全方位的技术服务支持。
-                    </p>
-                </div>
-            </div>
-        </section>
+
 
         <!-- 业务范围 -->
         <section id="services" class="section bg-alt">
@@ -144,6 +177,19 @@
                         <p class="mobile-compact-text"><strong data-i18n="companyName">公司名称：</strong><span data-i18n="companyValue">武汉特维克斯科技有限公司</span></p>
                         <p class="mobile-compact-text"><strong>Email：</strong>support@trivix.cn</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我们 -->
+        <section id="about" class="section bg-alt">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2 data-i18n="aboutTitle">关于我们</h2>
+                    <p class="lead" data-i18n="aboutContent">
+                        武汉特维克斯科技有限公司是一家专注于软件开发和技术服务的高新技术企业。
+                        我们致力于为客户提供专业的软件开发解决方案，包括工具软件开发、应用软件开发以及全方位的技术服务支持。
+                    </p>
                 </div>
             </div>
         </section>

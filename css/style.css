@@ -141,34 +141,228 @@ main {
     padding: 2rem 1rem;
 }
 
-/* 首页Banner */
+/* 首页Banner - 产品展示 */
 .hero-section {
     min-height: calc(var(--vh, 1vh) * 100 - 76px);
     display: flex;
     align-items: center;
-    text-align: center;
     padding: 4rem 0;
     /* 支持安全区域 */
     padding-top: max(4rem, var(--safe-area-inset-top));
 }
 
-.hero-section h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--text-color);
+.hero-product-showcase {
+    width: 100%;
+    min-height: 70vh;
 }
 
-.hero-section h2 {
-    font-size: 2rem;
+.hero-product-showcase .row {
+    min-height: 70vh;
+    align-items: center;
+}
+
+.hero-product-info {
+    padding: 3rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-product-title {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.hero-main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-sub-title {
+    font-size: 1.4rem;
+    font-weight: 500;
     color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    opacity: 0.9;
+}
+
+.hero-product-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: left;
+    max-width: 90%;
+}
+
+.hero-platform-support {
     margin-bottom: 2rem;
 }
 
-.hero-section .lead {
-    font-size: 1.25rem;
+.hero-platform-support p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.hero-platform-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.hero-platform-icon {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0.2) 100%);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.hero-platform-icon:hover {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #0056b3 100%);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.hero-free-version {
     color: var(--text-muted);
-    margin-bottom: 3rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0;
+    opacity: 0.8;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.hero-download-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.05) 0%, rgba(0, 123, 255, 0.1) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Hero区域App Store徽章 */
+.hero-app-store-badge {
+    margin-bottom: 2rem;
+}
+
+.hero-app-store-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.hero-app-store-link:hover {
+    transform: scale(1.05);
+}
+
+.hero-app-store-badge-official {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    color: white;
+    padding: 16px 28px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    min-width: 260px;
+    justify-content: flex-start;
+    gap: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-app-store-badge-official:hover {
+    background: #1a1a1a;
+    border-color: #555;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hero-apple-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-apple-logo svg {
+    width: 24px;
+    height: 28px;
+}
+
+.hero-badge-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.hero-download-text-small {
+    font-size: 13px;
+    color: #ffffff;
+    margin-bottom: 3px;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 0.3px;
+}
+
+.hero-app-store-text-large {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.hero-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-cta-buttons .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hero-cta-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
 /* 按钮样式 */
@@ -259,6 +453,186 @@ main {
 
 .feature-card p {
     color: var(--text-muted);
+}
+
+/* 产品展示样式 */
+.product-showcase {
+    margin-top: 2rem;
+}
+
+.product-info {
+    padding: 2rem 0;
+}
+
+.product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.product-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.features-list {
+    margin-bottom: 2rem;
+}
+
+.features-list h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.features-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.platform-support {
+    margin-bottom: 2rem;
+}
+
+.platform-support p {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.platform-icons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.platform-icon {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.platform-icon:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.free-version-note {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.product-download {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* App Store徽章样式 */
+.app-store-badge {
+    margin-bottom: 1rem;
+}
+
+.app-store-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.app-store-link:hover {
+    transform: scale(1.05);
+}
+
+/* 官方App Store徽章样式 */
+.app-store-badge-official {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    justify-content: flex-start;
+    gap: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.app-store-badge-official:hover {
+    background: #1a1a1a;
+    border-color: #555;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.apple-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.apple-logo svg {
+    width: 20px;
+    height: 24px;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.download-text-small {
+    font-size: 11px;
+    color: #ffffff;
+    margin-bottom: 2px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.app-store-text-large {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    line-height: 1;
+}
+
+.download-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 /* 联系我们 */
@@ -380,22 +754,101 @@ footer {
         padding: 2rem 0;
     }
 
-    .hero-section h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.75rem;
-        line-height: 1.2;
+    .hero-product-showcase .row {
+        min-height: auto;
+        flex-direction: column;
     }
 
-    .hero-section h2 {
-        font-size: 1.25rem;
+    .hero-product-info {
+        padding: 2rem 1rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-download-section {
+        margin-top: 2rem;
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, rgba(0, 123, 255, 0.03) 0%, rgba(0, 123, 255, 0.08) 100%);
+    }
+
+    .hero-product-title {
         margin-bottom: 1.5rem;
-        line-height: 1.3;
+        text-align: center;
     }
 
-    .hero-section .lead {
+    .hero-main-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.3rem;
+        line-height: 1.0;
+    }
+
+    .hero-sub-title {
         font-size: 1.1rem;
+        line-height: 1.1;
+    }
+
+    .hero-product-description {
+        font-size: 1rem;
         margin-bottom: 2rem;
-        line-height: 1.4;
+        line-height: 1.5;
+        text-align: center;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .hero-platform-support {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-platform-support p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-platform-icons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-platform-icon {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-free-version {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-download-section {
+        padding: 1.5rem 0;
+    }
+
+    .hero-app-store-badge-official {
+        min-width: 200px;
+        padding: 12px 20px;
+        gap: 14px;
+        border-radius: 10px;
+    }
+
+    .hero-apple-logo svg {
+        width: 22px;
+        height: 26px;
+    }
+
+    .hero-download-text-small {
+        font-size: 11px;
+    }
+
+    .hero-app-store-text-large {
+        font-size: 20px;
+    }
+
+    .hero-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
     }
 
     /* 按钮优化 */
@@ -503,19 +956,52 @@ footer {
         padding: 1.5rem 0;
     }
 
-    .hero-section h1 {
+    .hero-main-title {
         font-size: 2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
 
-    .hero-section h2 {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-section .lead {
+    .hero-sub-title {
         font-size: 1rem;
-        margin-bottom: 1.5rem;
+    }
+
+    .hero-product-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .hero-platform-support p {
+        font-size: 0.95rem;
+    }
+
+    .hero-platform-icon {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-free-version {
+        font-size: 0.9rem;
+    }
+
+    .hero-app-store-badge-official {
+        min-width: 180px;
+        padding: 10px 18px;
+        gap: 12px;
+        border-radius: 8px;
+    }
+
+    .hero-apple-logo svg {
+        width: 20px;
+        height: 24px;
+    }
+
+    .hero-download-text-small {
+        font-size: 10px;
+    }
+
+    .hero-app-store-text-large {
+        font-size: 18px;
     }
 
     /* 按钮进一步优化 */
@@ -615,12 +1101,59 @@ footer {
 
 /* 超小屏幕 (最大宽度 375px) */
 @media (max-width: 375px) {
-    .hero-section h1 {
-        font-size: 1.75rem;
+    /* Hero区域超小屏幕优化 */
+    .hero-section {
+        padding: 1rem 0;
     }
 
-    .hero-section h2 {
-        font-size: 1rem;
+    .hero-main-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .hero-sub-title {
+        font-size: 0.85rem;
+    }
+
+    .hero-product-description {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        line-height: 1.25;
+    }
+
+    .hero-platform-support p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-platform-icon {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.7rem;
+    }
+
+    .hero-free-version {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-app-store-badge-official {
+        min-width: 160px;
+        padding: 8px 16px;
+        gap: 10px;
+        border-radius: 6px;
+    }
+
+    .hero-apple-logo svg {
+        width: 18px;
+        height: 22px;
+    }
+
+    .hero-download-text-small {
+        font-size: 9px;
+    }
+
+    .hero-app-store-text-large {
+        font-size: 16px;
     }
 
     .section h2 {
