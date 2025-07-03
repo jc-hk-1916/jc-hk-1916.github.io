@@ -162,7 +162,7 @@ main {
 }
 
 .hero-product-info {
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -170,7 +170,7 @@ main {
 }
 
 .hero-product-title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: left;
 }
 
@@ -202,7 +202,7 @@ main {
 .hero-product-description {
     font-size: 1.1rem;
     color: var(--text-muted);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
     font-weight: 400;
     text-align: left;
@@ -210,7 +210,7 @@ main {
 }
 
 .hero-platform-support {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .hero-platform-support p {
@@ -247,24 +247,26 @@ main {
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
-.hero-free-version {
+.hero-platform-note {
+    font-size: 0.8rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    font-style: italic;
+    margin-top: 0.5rem;
     margin-bottom: 0;
-    opacity: 0.8;
+    opacity: 0.7;
+    font-style: italic;
     text-align: left;
-    margin-top: 1rem;
 }
+
+
 
 .hero-download-section {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     height: 100%;
     background: linear-gradient(135deg, rgba(0, 123, 255, 0.05) 0%, rgba(0, 123, 255, 0.1) 100%);
     border-radius: 20px;
@@ -760,19 +762,19 @@ footer {
     }
 
     .hero-product-info {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
         text-align: center;
         max-width: 100%;
     }
 
     .hero-download-section {
-        margin-top: 2rem;
-        padding: 2rem 1rem;
+        margin-top: 1.5rem;
+        padding: 1.5rem 1rem;
         background: linear-gradient(135deg, rgba(0, 123, 255, 0.03) 0%, rgba(0, 123, 255, 0.08) 100%);
     }
 
     .hero-product-title {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         text-align: center;
     }
 
@@ -789,7 +791,7 @@ footer {
 
     .hero-product-description {
         font-size: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         line-height: 1.5;
         text-align: center;
         max-width: 100%;
@@ -798,12 +800,12 @@ footer {
 
     .hero-platform-support {
         text-align: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 0;
     }
 
     .hero-platform-support p {
         font-size: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
     }
 
     .hero-platform-icons {
@@ -814,6 +816,12 @@ footer {
     .hero-platform-icon {
         font-size: 0.85rem;
         padding: 0.4rem 0.8rem;
+    }
+
+    .hero-platform-note {
+        font-size: 0.75rem;
+        text-align: center;
+        margin-top: 0.75rem;
     }
 
     .hero-free-version {

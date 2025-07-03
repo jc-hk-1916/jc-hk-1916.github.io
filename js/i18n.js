@@ -42,6 +42,7 @@ const translations = {
         feature5: "Multi-Device Experience - Optimized for Mac, iPhone, and iPad",
         feature6: "Session Management - Save server configurations for quick reconnection",
         availableOn: "Available on:",
+        platformNote: "iOS includes iPhone and iPad",
         freeVersion: "Free version supports up to 5 hosts with full feature access",
         downloadOnAppStore: "Download on the App Store"
     },
@@ -88,6 +89,7 @@ const translations = {
         feature5: "多设备体验 - 完美适配Mac、iPhone和iPad",
         feature6: "会话管理 - 保存常用服务器配置，快速重连",
         availableOn: "支持平台：",
+        platformNote: "iOS包含iPhone和iPad",
         freeVersion: "免费版本支持管理最多5个主机，享受完整功能",
         downloadOnAppStore: "在App Store下载"
     }
