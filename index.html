@@ -2,295 +2,467 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="NaviTerm - Professional SSH & SFTP client for Apple ecosystem. Connect to your servers from Mac, iPhone, or iPad.">
+    <meta name="keywords" content="SSH,SFTP,Terminal,macOS,iOS,iPad,Remote,Server">
+    <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Trivix Tech">
-    <meta name="application-name" content="Trivix Tech">
-    <meta name="msapplication-TileColor" content="#007bff">
-    <meta name="theme-color" content="#007bff">
-    <meta name="color-scheme" content="dark light">
-
-    <!-- PWA支持 -->
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMjAiIGZpbGw9IiMwMDdiZmYiLz4KPHN2ZyB4PSI0NSIgeT0iNDUiIHdpZHRoPSI5MCIgaGVpZ2h0PSI5MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Im0xMiAzLTEuOTEyIDUuODEzYTIgMiAwIDAgMS0xLjI3NSAxLjI3NUwzIDEybDUuODEzIDEuOTEyYTIgMiAwIDAgMSAxLjI3NSAxLjI3NUwxMiAyMWwxLjkxMi01LjgxM2EyIDIgMCAwIDEgMS4yNzUtMS4yNzVMMjEgMTJsLTUuODEzLTEuOTEyYTIgMiAwIDAgMS0xLjI3NS0xLjI3NUwxMiAzeiIvPgo8L3N2Zz4KPC9zdmc+">
-
-    <title data-i18n="subtitle">武汉特维克斯科技有限公司</title>
-
-    <!-- 预加载关键资源 -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <script>
-        // 添加初始化语言设置
-        document.addEventListener('DOMContentLoaded', () => {
-            const lang = localStorage.getItem('preferredLanguage') || 'en';
-            if (lang === 'zh') {
-                document.querySelector('[data-lang="zh"]').classList.add('active');
-                document.querySelector('[data-lang="en"]').classList.remove('active');
-                document.querySelector('.nav-link.dropdown-toggle').textContent = '中文';
-            }
-        });
-    </script>
+    <title>NaviTerm - SSH Client for Mac, iOS and iPad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Trivix Tech</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M4 17l6-6-6-6"></path>
+                    <path d="M12 19h8"></path>
+                </svg>
+                <span>NaviTerm</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" data-i18n="nav.features">Features</a>
+                <a href="#platforms" data-i18n="nav.platforms">Platforms</a>
+                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                <a href="#download" data-i18n="nav.download">Download</a>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-switch" id="langSwitch" aria-label="Switch Language">
+                    <i class="bi bi-globe2"></i>
+                    <span id="currentLang">EN</span>
+                </button>
+                <a href="https://apps.apple.com/us/app/naviterm/id6747072398" class="btn btn-primary" target="_blank" data-i18n="nav.cta">
+                    Get NaviTerm Free
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown ms-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item active" href="#" data-lang="en">English</a></li>
-                            <li><a class="dropdown-item" href="#" data-lang="zh">中文</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home" data-i18n="navHome">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about" data-i18n="navAbout">关于我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services" data-i18n="navServices">业务范围</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact" data-i18n="navContact">联系我们</a>
-                    </li>
-                </ul>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-links">
+                <a href="#features" data-i18n="nav.features">Features</a>
+                <a href="#platforms" data-i18n="nav.platforms">Platforms</a>
+                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                <a href="#download" data-i18n="nav.download">Download</a>
+            </div>
+            <div class="mobile-menu-actions">
+                <button class="lang-switch-mobile" id="langSwitchMobile">
+                    <i class="bi bi-globe2"></i>
+                    <span data-i18n="nav.switchLang">切换到中文</span>
+                </button>
+                <a href="https://apps.apple.com/us/app/naviterm/id6747072398" class="btn btn-primary btn-full" target="_blank" data-i18n="nav.cta">
+                    Get NaviTerm Free
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- 主要内容区域 -->
     <main>
-        <!-- 首页Banner - 产品展示 -->
-        <section id="home" class="hero-section">
-            <div class="container">
-                <div class="content-wrapper">
-                    <div class="hero-product-showcase">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="hero-product-info">
-                                    <div class="hero-product-title">
-                                        <h1 class="hero-main-title">NaviTerm</h1>
-                                        <h2 class="hero-sub-title" data-i18n="navitermSubtitle">专业SSH和SFTP客户端</h2>
-                                    </div>
-                                    <p class="hero-product-description" data-i18n="navitermDesc">
-                                        适用于所有Apple设备的强大SSH和SFTP客户端，为开发者、系统管理员和网络工程师提供安全高效的远程访问解决方案。
-                                    </p>
-
-                                    <div class="hero-platform-support">
-                                        <p><strong data-i18n="availableOn">支持平台：</strong></p>
-                                        <div class="hero-platform-icons">
-                                            <span class="hero-platform-icon">💻 macOS</span>
-                                            <span class="hero-platform-icon">📱 iOS</span>
-                                        </div>
-                                        <p class="hero-platform-note" data-i18n="platformNote">iOS包含iPhone和iPad</p>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="hero-download-section">
-                                    <div class="hero-app-store-badge">
-                                        <a href="https://apps.apple.com/us/app/naviterm/id6747072398" target="_blank" rel="noopener noreferrer" class="hero-app-store-link">
-                                            <div class="hero-app-store-badge-official">
-                                                <div class="hero-apple-logo">
-                                                    <svg width="24" height="28" viewBox="0 0 20 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M16.365 12.83c0-3.778 3.06-5.594 3.195-5.69C18.29 5.02 16.547 4.1 14.747 4.08c-1.514-.153-2.95.89-3.718.89-.767 0-1.95-.87-3.206-.845C5.993 4.15 4.296 5.11 3.41 6.71c-1.8 3.12-.46 7.755 1.295 10.29.86 1.24 1.888 2.635 3.236 2.585 1.297-.05 1.787-.84 3.355-.84 1.568 0 2.009.84 3.206.815 1.324-.025 2.278-1.24 3.138-2.485.994-1.44 1.402-2.835 1.427-2.91-.031-.015-2.74-1.05-2.74-4.16l.038-.34zM13.547 2.83c.717-.87 1.203-2.08 1.071-3.28-1.036.04-2.29.69-3.032 1.56-.665.77-1.248 2-1.092 3.18 1.155.09 2.335-.585 3.053-1.46z"/>
-                                                    </svg>
-                                                </div>
-                                                <div class="hero-badge-text">
-                                                    <div class="hero-download-text-small">Download on the</div>
-                                                    <div class="hero-app-store-text-large">App Store</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hero-cta-buttons">
-                                        <a href="#services" class="btn btn-outline" data-i18n="learnMoreBtn">了解更多</a>
-                                        <a href="#contact" class="btn btn-outline" data-i18n="contactBtn">联系我们</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- 业务范围 -->
-        <section id="services" class="section bg-alt">
-            <div class="container">
-                <div class="content-wrapper">
-                    <h2 data-i18n="servicesTitle">业务范围</h2>
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="feature-card">
-                                <i class="bi bi-tools"></i>
-                                <h3 data-i18n="servicesToolDev">工具软件开发</h3>
-                                <p data-i18n="servicesToolDesc">提供专业的工具软件开发服务，帮助客户提高工作效率。</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-card">
-                                <i class="bi bi-code-square"></i>
-                                <h3 data-i18n="servicesAppDev">应用软件开发</h3>
-                                <p data-i18n="servicesAppDesc">定制化的应用软件开发，满足客户的特定需求。</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-card">
-                                <i class="bi bi-gear"></i>
-                                <h3 data-i18n="servicesTechSupport">技术服务</h3>
-                                <p data-i18n="servicesTechDesc">提供专业的技术支持和服务，确保系统的稳定运行。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 联系我们 -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="content-wrapper">
-                    <h2 data-i18n="navContact">联系我们</h2>
-                    <div class="contact-info">
-                        <p class="mobile-compact-text"><strong data-i18n="companyName">公司名称：</strong><span data-i18n="companyValue">武汉特维克斯科技有限公司</span></p>
-                        <p class="mobile-compact-text"><strong>Email：</strong>support@trivix.cn</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 关于我们 -->
-        <section id="about" class="section bg-alt">
-            <div class="container">
-                <div class="content-wrapper">
-                    <h2 data-i18n="aboutTitle">关于我们</h2>
-                    <p class="lead" data-i18n="aboutContent">
-                        武汉特维克斯科技有限公司是一家专注于软件开发和技术服务的高新技术企业。
-                        我们致力于为客户提供专业的软件开发解决方案，包括工具软件开发、应用软件开发以及全方位的技术服务支持。
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span data-i18n="hero.title1">SSH client that</span><br>
+                        <span class="gradient-text" data-i18n="hero.title2">works on all</span><br>
+                        <span data-i18n="hero.title3">Apple devices</span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">
+                        Connect to your servers from Mac, iPhone, or iPad with one tap. Secure, fast, and beautifully designed for Apple ecosystem.
                     </p>
+                    <div class="hero-cta">
+                        <a href="https://apps.apple.com/us/app/naviterm/id6747072398" class="btn btn-large btn-white" target="_blank">
+                            <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            <span data-i18n="hero.download">Download for Free</span>
+                        </a>
+                        <a href="#features" class="btn btn-large btn-outline" data-i18n="hero.learnMore">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="hero-platforms">
+                        <span class="platform-label" data-i18n="hero.availableOn">Available on</span>
+                        <div class="platform-icons">
+                            <div class="platform-icon" title="macOS">
+                                <i class="bi bi-laptop"></i>
+                                <span>macOS</span>
+                            </div>
+                            <div class="platform-icon" title="iPhone">
+                                <i class="bi bi-phone"></i>
+                                <span>iPhone</span>
+                            </div>
+                            <div class="platform-icon" title="iPad">
+                                <i class="bi bi-tablet"></i>
+                                <span>iPad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">NaviTerm — root@server</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">root@server</span>:<span class="path">~</span>$ <span class="command">ssh user@192.168.1.100</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Welcome to Ubuntu 22.04.3 LTS</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Last login: Thu Nov 28 10:23:45 2024</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">user@ubuntu</span>:<span class="path">~</span>$ <span class="command">ls -la</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output file">drwxr-xr-x  5 user user 4096 Nov 28 10:00 <span class="dir">Documents</span></span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output file">drwxr-xr-x  3 user user 4096 Nov 27 15:30 <span class="dir">Projects</span></span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output file">-rw-r--r--  1 user user  512 Nov 26 09:15 config.yml</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">user@ubuntu</span>:<span class="path">~</span>$ <span class="cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="bi bi-shield-check"></i>
+                        <span data-i18n="hero.encryption">256-bit Encryption</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span data-i18n="hero.fast">Fast Connection</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands">
+            <div class="brands-container">
+                <p class="brands-label" data-i18n="brands.label">Trusted protocols & standards</p>
+                <div class="brands-list">
+                    <span class="brand-item">SSH</span>
+                    <span class="brand-item">SFTP</span>
+                    <span class="brand-item">RSA</span>
+                    <span class="brand-item">ED25519</span>
+                    <span class="brand-item">OpenSSH</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label" data-i18n="features.label">Features</span>
+                    <h2 class="section-title">
+                        <span data-i18n="features.title1">Everything you need to</span><br>
+                        <span class="gradient-text" data-i18n="features.title2">manage your servers</span>
+                    </h2>
+                    <p class="section-desc" data-i18n="features.desc">Powerful features designed for developers, sysadmins, and IT professionals.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card feature-large">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <i class="bi bi-terminal"></i>
+                            </div>
+                            <h3 data-i18n="features.ssh.title">SSH Terminal</h3>
+                            <p data-i18n="features.ssh.desc">Full-featured terminal emulator with support for colors, Unicode, and custom fonts. Execute commands with lightning-fast response times.</p>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check2"></i> <span data-i18n="features.ssh.item1">Password & Key Authentication</span></li>
+                                <li><i class="bi bi-check2"></i> <span data-i18n="features.ssh.item2">Multi-tab Sessions</span></li>
+                                <li><i class="bi bi-check2"></i> <span data-i18n="features.ssh.item3">Full Terminal Emulation</span></li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <div class="mini-terminal">
+                                <div class="mt-header"></div>
+                                <div class="mt-content">
+                                    <span class="mt-line"><span class="mt-prompt">$</span> docker ps</span>
+                                    <span class="mt-line mt-output">CONTAINER ID  IMAGE</span>
+                                    <span class="mt-line mt-output">a1b2c3d4e5f6  nginx:latest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-folder2-open"></i>
+                        </div>
+                        <h3 data-i18n="features.sftp.title">SFTP File Manager</h3>
+                        <p data-i18n="features.sftp.desc">Intuitive dual-pane file browser. Upload, download, rename, and manage files with drag-and-drop simplicity.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <h3 data-i18n="features.port.title">Port Forwarding</h3>
+                        <p data-i18n="features.port.desc">Configure local and remote port forwarding. Create SSH tunnels to securely access internal services.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-key"></i>
+                        </div>
+                        <h3 data-i18n="features.key.title">Key Management</h3>
+                        <p data-i18n="features.key.desc">Import, generate, and manage SSH keys. Support for RSA, ED25519, and encrypted private keys.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <h3 data-i18n="features.security.title">Secure by Design</h3>
+                        <p data-i18n="features.security.desc">End-to-end encryption. Your keys and credentials never leave your device. Zero data collection policy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="platforms" class="platforms">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label" data-i18n="platforms.label">Cross-Platform</span>
+                    <h2 class="section-title">
+                        <span data-i18n="platforms.title1">One app,</span><br>
+                        <span class="gradient-text" data-i18n="platforms.title2">all Apple devices</span>
+                    </h2>
+                    <p class="section-desc" data-i18n="platforms.desc">Seamlessly switch between your Mac, iPhone, and iPad. Your connections are always with you.</p>
+                </div>
+
+                <div class="platforms-showcase">
+                    <div class="platform-card">
+                        <div class="platform-device">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h3>macOS</h3>
+                        <p data-i18n="platforms.macos.desc">Native Mac app with full keyboard support, Touch Bar integration, and macOS shortcuts.</p>
+                        <span class="platform-badge" data-i18n="platforms.macos.badge">Apple Silicon Ready</span>
+                    </div>
+                    <div class="platform-card platform-featured">
+                        <div class="platform-device">
+                            <i class="bi bi-tablet"></i>
+                        </div>
+                        <h3>iPad</h3>
+                        <p data-i18n="platforms.ipad.desc">Optimized for iPad with keyboard support, Split View, and Slide Over multitasking.</p>
+                        <span class="platform-badge" data-i18n="platforms.ipad.badge">Stage Manager Support</span>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-device">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3>iPhone</h3>
+                        <p data-i18n="platforms.iphone.desc">Full SSH client in your pocket. Quick actions, widgets, and gesture-based navigation.</p>
+                        <span class="platform-badge" data-i18n="platforms.iphone.badge">Face ID / Touch ID</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="languages">
+            <div class="section-container">
+                <div class="languages-content">
+                    <div class="languages-text">
+                        <span class="section-label" data-i18n="languages.label">Global</span>
+                        <h2 class="section-title">
+                            <span data-i18n="languages.title1">Speak your</span><br>
+                            <span class="gradient-text" data-i18n="languages.title2">language</span>
+                        </h2>
+                        <p data-i18n="languages.desc">NaviTerm supports 20+ languages including Chinese, English, Japanese, Korean, German, French, Spanish, Arabic, and more.</p>
+                    </div>
+                    <div class="languages-grid">
+                        <span>简体中文</span>
+                        <span>繁體中文</span>
+                        <span>English</span>
+                        <span>日本語</span>
+                        <span>한국어</span>
+                        <span>Deutsch</span>
+                        <span>Français</span>
+                        <span>Español</span>
+                        <span>Italiano</span>
+                        <span>Português</span>
+                        <span>Русский</span>
+                        <span>العربية</span>
+                        <span class="lang-more">+8 more</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label" data-i18n="pricing.label">Pricing</span>
+                    <h2 class="section-title">
+                        <span data-i18n="pricing.title1">Simple,</span><br>
+                        <span class="gradient-text" data-i18n="pricing.title2">transparent pricing</span>
+                    </h2>
+                    <p class="section-desc" data-i18n="pricing.desc">Start free, upgrade when you need more.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 data-i18n="pricing.free.title">Free</h3>
+                            <div class="pricing-price">
+                                <span class="price">$0</span>
+                                <span class="period" data-i18n="pricing.free.period">forever</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.free.item1">Up to 5 hosts</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.free.item2">SSH Terminal</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.free.item3">SFTP File Manager</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.free.item4">Port Forwarding</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.free.item5">Key Management</span></li>
+                        </ul>
+                        <a href="https://apps.apple.com/us/app/naviterm/id6747072398" class="btn btn-outline btn-full" target="_blank" data-i18n="pricing.free.cta">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card pricing-featured">
+                        <div class="pricing-badge" data-i18n="pricing.pro.badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 data-i18n="pricing.pro.title">Pro Monthly</h3>
+                            <div class="pricing-price">
+                                <span class="price">$0.99</span>
+                                <span class="period" data-i18n="pricing.pro.period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.pro.item1"><strong>Unlimited</strong> hosts</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.pro.item2">Everything in Free</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.pro.item3">Offline Mode</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.pro.item4">Priority Support</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.pro.item5">Early Access Features</span></li>
+                        </ul>
+                        <a href="https://apps.apple.com/us/app/naviterm/id6747072398" class="btn btn-primary btn-full" target="_blank" data-i18n="pricing.pro.cta">Subscribe Now</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-save" data-i18n="pricing.yearly.save">Save 75%</div>
+                        <div class="pricing-header">
+                            <h3 data-i18n="pricing.yearly.title">Pro Yearly</h3>
+                            <div class="pricing-price">
+                                <span class="price">$2.99</span>
+                                <span class="period" data-i18n="pricing.yearly.period">/year</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.yearly.item1"><strong>Unlimited</strong> hosts</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.yearly.item2">Everything in Monthly</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.yearly.item3">Best Value</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.yearly.item4">Priority Support</span></li>
+                            <li><i class="bi bi-check2"></i> <span data-i18n="pricing.yearly.item5">All Future Updates</span></li>
+                        </ul>
+                        <a href="https://apps.apple.com/us/app/naviterm/id6747072398" class="btn btn-outline btn-full" target="_blank" data-i18n="pricing.yearly.cta">Get Yearly</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="cta">
+            <div class="section-container">
+                <div class="cta-content">
+                    <h2 data-i18n="cta.title">Ready to take control of<br>your servers?</h2>
+                    <p data-i18n="cta.desc">Download NaviTerm for free and experience the best SSH client for Apple devices.</p>
+                    <a href="https://apps.apple.com/us/app/naviterm/id6747072398" class="btn btn-large btn-white" target="_blank">
+                        <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <span data-i18n="cta.button">Download on App Store</span>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p data-i18n="footerCopyright"> 2025 武汉特维克斯科技有限公司. All rights reserved.</p>
-                    <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">鄂ICP备2025143487号-1</a> | <a href="NaviTerm_Privacy_Policy.html" onclick="saveLanguage()" data-i18n="privacyPolicy">Privacy Policy</a></p>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M4 17l6-6-6-6"></path>
+                            <path d="M12 19h8"></path>
+                        </svg>
+                        <span>NaviTerm</span>
+                    </a>
+                    <p data-i18n="footer.desc">Professional SSH & SFTP client for Apple ecosystem.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.product">Product</h4>
+                        <a href="#features" data-i18n="nav.features">Features</a>
+                        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                        <a href="#download" data-i18n="nav.download">Download</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.company">Company</h4>
+                        <a href="#" data-i18n="footer.about">About Us</a>
+                        <a href="mailto:support@trivix.cn" data-i18n="footer.contact">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.legal">Legal</h4>
+                        <a href="NaviTerm_Privacy_Policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" data-i18n="footer.terms">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2025 Wuhan Trivix Technology Co., Ltd. All rights reserved.</p>
+                <div class="footer-beian">
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42018502008154" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/xiaozhuai/express-static@master/beian_icon.png" alt="">
+                        鄂公网安备 42018502008154号
+                    </a>
+                    <span>|</span>
+                    <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2025143487号-1</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- PWA安装提示 -->
-    <div id="pwa-install-banner" class="pwa-install-banner" style="display: none;">
-        <div class="pwa-banner-content">
-            <div class="pwa-banner-text">
-                <strong data-i18n="pwaInstallTitle">安装应用</strong>
-                <p data-i18n="pwaInstallDesc">将网站添加到主屏幕，获得更好的体验</p>
-            </div>
-            <div class="pwa-banner-actions">
-                <button id="pwa-install-btn" class="btn btn-primary btn-sm" data-i18n="pwaInstallBtn">安装</button>
-                <button id="pwa-dismiss-btn" class="btn btn-outline btn-sm" data-i18n="pwaDismissBtn">稍后</button>
-            </div>
-        </div>
-    </div>
+    <nav class="mobile-bottom-nav">
+        <a href="#" class="mobile-nav-item active">
+            <i class="bi bi-house"></i>
+            <span data-i18n="mobile.home">Home</span>
+        </a>
+        <a href="#features" class="mobile-nav-item">
+            <i class="bi bi-grid"></i>
+            <span data-i18n="nav.features">Features</span>
+        </a>
+        <a href="#pricing" class="mobile-nav-item">
+            <i class="bi bi-tag"></i>
+            <span data-i18n="nav.pricing">Pricing</span>
+        </a>
+        <a href="#download" class="mobile-nav-item">
+            <i class="bi bi-download"></i>
+            <span data-i18n="nav.download">Download</span>
+        </a>
+    </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
-
-    <!-- PWA支持脚本 -->
-    <script>
-        // PWA安装提示
-        let deferredPrompt;
-        const installBanner = document.getElementById('pwa-install-banner');
-        const installBtn = document.getElementById('pwa-install-btn');
-        const dismissBtn = document.getElementById('pwa-dismiss-btn');
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // 阻止默认的安装提示
-            e.preventDefault();
-            deferredPrompt = e;
-
-            // 检查用户是否之前已经拒绝安装
-            if (!localStorage.getItem('pwa-dismissed')) {
-                installBanner.style.display = 'block';
-            }
-        });
-
-        installBtn.addEventListener('click', async () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                console.log(`用户选择: ${outcome}`);
-                deferredPrompt = null;
-                installBanner.style.display = 'none';
-            }
-        });
-
-        dismissBtn.addEventListener('click', () => {
-            installBanner.style.display = 'none';
-            localStorage.setItem('pwa-dismissed', 'true');
-        });
-
-        // 检测应用是否已安装
-        window.addEventListener('appinstalled', () => {
-            console.log('PWA已安装');
-            installBanner.style.display = 'none';
-        });
-
-        // 注册Service Worker（如果需要离线支持）
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then((registration) => {
-                        console.log('SW注册成功: ', registration);
-                    })
-                    .catch((registrationError) => {
-                        console.log('SW注册失败: ', registrationError);
-                    });
-            });
-        }
-
-        // 移动端键盘处理
-        if (window.innerWidth <= 767) {
-            const viewport = document.querySelector('meta[name=viewport]');
-
-            // 检测虚拟键盘
-            window.addEventListener('resize', () => {
-                if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
-                    if (window.innerHeight < window.screen.height * 0.75) {
-                        document.body.classList.add('keyboard-open');
-                    } else {
-                        document.body.classList.remove('keyboard-open');
-                    }
-                }
-            });
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
