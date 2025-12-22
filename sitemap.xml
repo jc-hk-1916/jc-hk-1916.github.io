@@ -19,6 +19,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.trivix.cn/zh/</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.trivix.cn/privacy_test.html</loc>
     <lastmod>2025-11-28</lastmod>
     <changefreq>monthly</changefreq>
