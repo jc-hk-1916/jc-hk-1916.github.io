@@ -3,43 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="NaviTerm - 最好用的免费 SSH 客户端，支持 Mac、iPhone 和 iPad。Termius 替代品，功能强大的终端模拟器，支持 SFTP 文件管理、端口转发和密钥管理。">
-    <meta name="keywords" content="SSH客户端,SFTP客户端,Termius替代,SSH工具Mac,SSH工具iPhone,SSH工具iPad,终端模拟器,SSH密钥管理,端口转发,WebSSH,远程服务器,免费SSH客户端,macOS SSH终端,iOS SSH终端,苹果SSH工具">
+    <meta name="description" content="NaviTerm - 集成 AI 助手的专业 SSH 客户端，支持 Mac、iPhone 和 iPad。月付 $0.99、年付 $5.99、$29.99 一次性买断终身。最佳免费 Termius 替代品。">
+    <meta name="keywords" content="AI SSH客户端,SSH客户端,SSH助手,Termius替代,SFTP客户端,SSH自动化,iCloud同步,SOCKS5代理,跳板机,SSH端口转发,SSH密钥管理,免费SSH客户端,Mac SSH,iPhone SSH,iPad SSH,WebSSH,终身买断SSH客户端">
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="baidu-site-verification" content="codeva-Y2US7EVihD" />
-    <title>NaviTerm - Mac/iPhone/iPad 最佳免费 SSH 客户端 | Termius 替代品</title>
-    <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+    <!--
+        在各搜索引擎站长平台注册后，去掉对应行的注释并将 VALUE 替换为各自的验证码。
+        google-site-verification : Google Search Console
+        msvalidate.01            : Bing Webmaster Tools
+        yandex-verification      : Yandex Webmaster
+        360-site-verification    : 360 站长平台
+        sogou_site_verification  : 搜狗站长平台
+    -->
+    <!-- <meta name="google-site-verification" content="VALUE" /> -->
+    <!-- <meta name="msvalidate.01"            content="VALUE" /> -->
+    <!-- <meta name="yandex-verification"      content="VALUE" /> -->
+    <!-- <meta name="360-site-verification"    content="VALUE" /> -->
+    <!-- <meta name="sogou_site_verification"  content="VALUE" /> -->
+
+    <title>NaviTerm — Mac/iPhone/iPad AI 智能 SSH 客户端 | 月付 $0.99 起</title>
+    <!-- Favicons (相对路径，本地 file:// 预览和线上 https:// 都能加载) -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../web-app-manifest-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="mask-icon" href="../favicon.svg" color="#6366f1">
     <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <!-- Microsoft Tile -->
+    <meta name="application-name" content="NaviTerm">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="../web-app-manifest-192x192.png">
+    <meta name="msapplication-config" content="none">
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.trivix.cn/zh/">
     <link rel="alternate" hreflang="en" href="https://www.trivix.cn/">
     <link rel="alternate" hreflang="zh" href="https://www.trivix.cn/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://www.trivix.cn/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NaviTerm">
+    <meta property="og:url" content="https://www.trivix.cn/zh/">
+    <meta property="og:title" content="NaviTerm — Mac/iPhone/iPad AI 智能 SSH 客户端">
+    <meta property="og:description" content="集成 AI 助手的专业 SSH 客户端：内置 Copilot、自动化引擎、iCloud 同步、SFTP、端口转发。免费版支持 5 个主机；月付 $0.99、年付 $5.99、$29.99 终身买断。">
+    <meta property="og:image" content="https://www.trivix.cn/assets/og-card.png">
+    <meta property="og:image:secure_url" content="https://www.trivix.cn/assets/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="NaviTerm — Mac、iPhone 和 iPad 的 AI 智能 SSH 客户端，月付 $0.99 起，$29.99 终身买断。">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NaviTerm — Mac/iPhone/iPad AI 智能 SSH 客户端">
+    <meta name="twitter:description" content="AI 助手、自动化、iCloud 同步、SFTP、端口转发 — 一款应用搞定。免费版可用，$29.99 终身买断。">
+    <meta name="twitter:image" content="https://www.trivix.cn/assets/og-card.png">
+    <meta name="twitter:image:alt" content="NaviTerm — Mac、iPhone 和 iPad 的 AI 智能 SSH 客户端。">
+
+    <!-- SEO directives -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="武汉特维克斯科技有限公司">
+
+    <!-- Performance hints -->
+    <link rel="dns-prefetch" href="https://apps.apple.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NaviTerm",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "SSH 客户端",
+        "operatingSystem": "macOS, iOS, iPadOS",
+        "description": "集成 AI 助手的专业 SSH 客户端，专为 Mac、iPhone 和 iPad 打造。内置 AI Copilot、可视化自动化引擎、iCloud 同步、SFTP、端口转发、跳板机和 SOCKS5 代理。",
+        "url": "https://www.trivix.cn/zh/",
+        "downloadUrl": "https://apps.apple.com/cn/app/naviterm/id6747072398",
+        "image": "https://www.trivix.cn/web-app-manifest-512x512.png",
+        "inLanguage": ["zh", "en", "ja", "ko", "de", "fr", "es", "ru", "ar"],
+        "offers": [
+            {"@type": "Offer", "name": "免费版", "price": "0", "priceCurrency": "USD", "category": "Free", "availability": "https://schema.org/InStock"},
+            {"@type": "Offer", "name": "Pro 月付", "price": "0.99", "priceCurrency": "USD", "category": "Subscription", "availability": "https://schema.org/InStock"},
+            {"@type": "Offer", "name": "Pro 年付", "price": "5.99", "priceCurrency": "USD", "category": "Subscription", "availability": "https://schema.org/InStock"},
+            {"@type": "Offer", "name": "终身买断", "price": "29.99", "priceCurrency": "USD", "category": "OneTimePurchase", "availability": "https://schema.org/InStock"}
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "武汉特维克斯科技有限公司",
+            "url": "https://www.trivix.cn/"
+        },
+        "featureList": [
+            "AI 智能助手（OpenAI、Claude、Gemini）",
+            "多标签 SSH 终端",
+            "SFTP 文件管理",
+            "端口转发与 SOCKS5 代理",
+            "跳板机 / 堡垒机支持",
+            "可视化自动化引擎",
+            "iCloud 同步（Mac、iPad、iPhone）",
+            "iOS 后台保活",
+            "SSH 密钥管理（RSA、ED25519、P256）",
+            "25+ 种语言支持"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "NaviTerm 真的免费吗？", "acceptedAnswer": {"@type": "Answer", "text": "是的。免费版支持最多 5 个主机，包含全部核心功能 — SSH、SFTP、端口转发、命令片段，以及自有 AI 密钥接入。Pro 版仅解锁无限主机和离线模式。"}},
+            {"@type": "Question", "name": "NaviTerm Pro 多少钱？", "acceptedAnswer": {"@type": "Answer", "text": "月付 $0.99、年付 $5.99（比月付省 50%），或者 $29.99 一次性买断终身。买断价大约 5 年回本，并包含所有未来更新。"}},
+            {"@type": "Question", "name": "终身买断真的是终身吗？", "acceptedAnswer": {"@type": "Answer", "text": "是的 — 一次付款，永远享用 NaviTerm 所有未来版本。绑定的是你的 Apple ID。只要你能从 App Store 重新下载本应用，Pro 功能就一直有效。"}},
+            {"@type": "Question", "name": "我的 SSH 密钥安全吗？", "acceptedAnswer": {"@type": "Answer", "text": "绝对安全。私钥存储在 iOS / macOS Keychain，永远不会离开你的设备。我们零数据收集 — 没有遥测，不分析你的会话。"}},
+            {"@type": "Question", "name": "支持哪些密钥类型？", "acceptedAnswer": {"@type": "Answer", "text": "支持 RSA、ED25519、P256 ECDSA，以及 OpenSSH 格式的加密私钥。同时支持密码认证和键盘交互（2FA）。"}},
+            {"@type": "Question", "name": "跨设备同步怎么工作？", "acceptedAnswer": {"@type": "Answer", "text": "NaviTerm 使用 CloudKit（iCloud）— 数据通过你的 Apple ID 端到端同步。无需 NaviTerm 账号，无 NaviTerm 服务器。"}},
+            {"@type": "Question", "name": "后台保活会耗电吗？", "acceptedAnswer": {"@type": "Answer", "text": "我们高效使用 iOS Background Tasks 和 BGProcessingTask API。空闲 SSH 会话耗电极低，相当于一个暂停状态的音乐应用。"}},
+            {"@type": "Question", "name": "可以从 Termius 导入吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以 — 同时支持 Termius 的 JSON 导出和 OpenSSH config 导入。多数用户 5 分钟内完成迁移。"}},
+            {"@type": "Question", "name": "AI 助手要额外付费吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。NaviTerm 本身不为 AI 收费。你只需接入自己的 OpenAI / Anthropic / Gemini API Key，直接付费给 AI 服务商。"}},
+            {"@type": "Question", "name": "支持哪些 AI 服务商？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI（GPT-4、GPT-4o）、Anthropic（Claude 3 系列）、Google Gemini，以及任何兼容 OpenAI 协议的端点（LocalAI、Groq、DeepSeek、OpenRouter 等）。"}}
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "武汉特维克斯科技有限公司",
+        "alternateName": "Wuhan Trivix Technology Co., Ltd.",
+        "url": "https://www.trivix.cn/",
+        "logo": "https://www.trivix.cn/web-app-manifest-512x512.png",
+        "email": "support@trivix.cn",
+        "sameAs": [
+            "https://t.me/NavitermNews",
+            "https://t.me/NaviTermCommunity",
+            "https://apps.apple.com/cn/app/naviterm/id6747072398"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "NaviTerm",
+        "url": "https://www.trivix.cn/zh/",
+        "inLanguage": "zh-CN",
+        "publisher": {"@type": "Organization", "name": "武汉特维克斯科技有限公司"}
+    }
+    </script>
 </head>
 <body>
     <nav class="nav">
         <div class="nav-container">
             <a href="/zh/" class="nav-logo">
-                <img src="../assets/app_icon.png" alt="NaviTerm logo" class="logo-image" width="40" height="40" decoding="async">
+                <img src="../assets/app_icon-96.png" alt="NaviTerm logo" class="logo-image" width="40" height="40" decoding="async">
                 <span>NaviTerm</span>
             </a>
             <div class="nav-links">
+                <a href="#ai">AI 助手</a>
                 <a href="#features">功能</a>
-                <a href="#platforms">平台</a>
+                <a href="#screenshots">截图</a>
                 <a href="#pricing">价格</a>
-                <a href="#download">下载</a>
+                <a href="#faq">常见问题</a>
             </div>
             <div class="nav-actions">
                 <a href="/" class="lang-switch" aria-label="Switch Language">
                     <i class="bi bi-globe2"></i>
                     <span>EN</span>
                 </a>
-                <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-primary" target="_blank">
+                <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-primary" target="_blank" rel="noopener">
                     免费获取 NaviTerm
                 </a>
             </div>
@@ -52,14 +207,16 @@
         <div class="mobile-menu" id="mobileMenu">
             <div class="mobile-menu-header">
                 <a href="/zh/" class="nav-logo mobile-logo">
-                    <img src="../assets/app_icon.png" alt="NaviTerm logo" class="logo-image" width="48" height="48" decoding="async">
+                    <img src="../assets/app_icon-96.png" alt="NaviTerm logo" class="logo-image" width="48" height="48" decoding="async">
                     <span>NaviTerm</span>
                 </a>
             </div>
             <div class="mobile-menu-links">
+                <a href="#ai">AI 助手</a>
                 <a href="#features">功能</a>
-                <a href="#platforms">平台</a>
+                <a href="#screenshots">截图</a>
                 <a href="#pricing">价格</a>
+                <a href="#faq">常见问题</a>
                 <a href="#download">下载</a>
             </div>
             <div class="mobile-menu-actions">
@@ -67,7 +224,7 @@
                     <i class="bi bi-globe2"></i>
                     <span>Switch to English</span>
                 </a>
-                <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-primary btn-full" target="_blank">
+                <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-primary btn-full" target="_blank" rel="noopener">
                     免费获取 NaviTerm
                 </a>
             </div>
@@ -75,43 +232,46 @@
     </nav>
 
     <main>
+        <!-- ============ HERO ============ -->
         <section class="hero">
+            <div class="hero-bg-glow"></div>
             <div class="hero-container">
                 <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        <span>全新 · 内置 AI 助手 · 终身买断 $29.99</span>
+                    </div>
                     <h1 class="hero-title">
-                        <span>适用于所有</span><br>
-                        <span class="gradient-text">Apple 设备的</span><br>
-                        <span>SSH 客户端</span>
+                        <span>集成 AI 助手的</span><br>
+                        <span class="gradient-text">SSH 客户端</span><br>
+                        <span>专为 Apple 设备打造</span>
                     </h1>
                     <p class="hero-subtitle">
-                        一键连接您的服务器，支持 Mac、iPhone 和 iPad。安全、快速，专为 Apple 生态系统精心设计。
+                        SSH 终端、SFTP、端口转发、自动化任务、AI 助手 — 一款应用搞定 Mac、iPhone 和 iPad 的所有运维需求。免费版永久支持 5 个主机。
                     </p>
                     <div class="hero-cta">
-                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-large btn-white" target="_blank">
+                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-large btn-white" target="_blank" rel="noopener">
                             <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                             </svg>
                             <span>免费下载</span>
                         </a>
-                        <a href="#features" class="btn btn-large btn-outline">
-                            了解更多
+                        <a href="#ai" class="btn btn-large btn-outline">
+                            看 AI 演示
                         </a>
                     </div>
-                    <div class="hero-platforms">
-                        <span class="platform-label">支持平台</span>
-                        <div class="platform-icons">
-                            <div class="platform-icon" title="macOS">
-                                <i class="bi bi-laptop"></i>
-                                <span>macOS</span>
-                            </div>
-                            <div class="platform-icon" title="iPhone">
-                                <i class="bi bi-phone"></i>
-                                <span>iPhone</span>
-                            </div>
-                            <div class="platform-icon" title="iPad">
-                                <i class="bi bi-tablet"></i>
-                                <span>iPad</span>
-                            </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="stat-num">25+</div>
+                            <div class="stat-label">语言支持</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-num">3</div>
+                            <div class="stat-label">Apple 平台</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-num">$0.99</div>
+                            <div class="stat-label">每月起</div>
                         </div>
                     </div>
                 </div>
@@ -127,57 +287,163 @@
                         </div>
                         <div class="terminal-body">
                             <div class="terminal-line">
-                                <span class="prompt">root@server</span>:<span class="path">~</span>$ <span class="command">ssh user@192.168.1.100</span>
+                                <span class="prompt">root@server</span>:<span class="path">~</span>$ <span class="command">docker logs nginx --tail 5</span>
                             </div>
                             <div class="terminal-line">
-                                <span class="output">Welcome to Ubuntu 22.04.3 LTS</span>
+                                <span class="output ai-error">[error] connect() failed (111: Connection refused)</span>
                             </div>
                             <div class="terminal-line">
-                                <span class="output">Last login: Thu Nov 28 10:23:45 2024</span>
+                                <span class="output ai-error">while connecting to upstream</span>
                             </div>
                             <div class="terminal-line">
-                                <span class="prompt">user@ubuntu</span>:<span class="path">~</span>$ <span class="command">ls -la</span>
+                                <span class="prompt">root@server</span>:<span class="path">~</span>$ <span class="command ai-suggested">⚡ ai 修复</span>
                             </div>
                             <div class="terminal-line">
-                                <span class="output file">drwxr-xr-x  5 user user 4096 Nov 28 10:00 <span class="dir">Documents</span></span>
+                                <span class="output ai-tag">→ AI 助手</span>
                             </div>
                             <div class="terminal-line">
-                                <span class="output file">drwxr-xr-x  3 user user 4096 Nov 27 15:30 <span class="dir">Projects</span></span>
+                                <span class="output">上游服务已停止。试试：</span>
                             </div>
                             <div class="terminal-line">
-                                <span class="output file">-rw-r--r--  1 user user  512 Nov 26 09:15 config.yml</span>
+                                <span class="output ai-cmd">$ systemctl restart php-fpm</span>
                             </div>
                             <div class="terminal-line">
-                                <span class="prompt">user@ubuntu</span>:<span class="path">~</span>$ <span class="cursor">_</span>
+                                <span class="prompt">root@server</span>:<span class="path">~</span>$ <span class="cursor">_</span>
                             </div>
                         </div>
                     </div>
-                    <div class="floating-card card-1">
+                    <div class="floating-card card-1 glass-card">
                         <i class="bi bi-shield-check"></i>
                         <span>256位加密</span>
                     </div>
-                    <div class="floating-card card-2">
+                    <div class="floating-card card-2 glass-card">
                         <i class="bi bi-lightning-charge"></i>
                         <span>快速连接</span>
+                    </div>
+                    <div class="floating-card card-3 glass-card">
+                        <i class="bi bi-stars"></i>
+                        <span>AI 智能助手</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ============ BRANDS ============ -->
         <section class="brands">
             <div class="brands-container">
-                <p class="brands-label">支持的协议和标准</p>
+                <p class="brands-label">支持的协议、标准与 AI 服务</p>
                 <div class="brands-list">
                     <span class="brand-item">SSH</span>
                     <span class="brand-item">SFTP</span>
                     <span class="brand-item">RSA</span>
                     <span class="brand-item">ED25519</span>
                     <span class="brand-item">OpenSSH</span>
+                    <span class="brand-item brand-ai">OpenAI</span>
+                    <span class="brand-item brand-ai">Claude</span>
+                    <span class="brand-item brand-ai">Gemini</span>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="features">
+        <!-- ============ STATS / TRUST BANNER ============ -->
+        <section class="stats-banner reveal">
+            <div class="section-container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="bi bi-shield-fill-check"></i></div>
+                        <div class="stat-card-num">0&nbsp;KB</div>
+                        <div class="stat-card-label">数据收集</div>
+                        <div class="stat-card-sub">无遥测、无分析。永远不会有。</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="bi bi-fingerprint"></i></div>
+                        <div class="stat-card-num">256位</div>
+                        <div class="stat-card-label">SSH 加密</div>
+                        <div class="stat-card-sub">OpenSSH 协议栈，钥匙串保护私钥</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="bi bi-stopwatch"></i></div>
+                        <div class="stat-card-num">&lt;&nbsp;30秒</div>
+                        <div class="stat-card-label">首次连接</div>
+                        <div class="stat-card-sub">导入密钥、点击连接，立刻进入服务器</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="bi bi-arrow-repeat"></i></div>
+                        <div class="stat-card-num">三端</div>
+                        <div class="stat-card-label">iCloud 同步</div>
+                        <div class="stat-card-sub">Mac · iPad · iPhone 实时互通</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ AI COPILOT ============ -->
+        <section id="ai" class="ai-section reveal">
+            <div class="ai-bg-glow"></div>
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label section-label-ai">AI 助手</span>
+                    <h2 class="section-title">
+                        <span>你的终端，</span><br>
+                        <span class="gradient-text">由 AI 加持</span>
+                    </h2>
+                    <p class="section-desc">AI 助手就在终端旁。一键解释输出、修复错误、优化脚本、安全审计。自带 OpenAI / Claude / Gemini 密钥，按量付费给 AI 服务商。</p>
+                </div>
+
+                <div class="ai-showcase">
+                    <div class="ai-features">
+                        <div class="ai-feature">
+                            <div class="ai-feature-icon"><i class="bi bi-chat-square-text"></i></div>
+                            <h4>解释输出</h4>
+                            <p>看不懂报错？直接问。NaviTerm 自动把输出发给你选择的 AI。</p>
+                        </div>
+                        <div class="ai-feature">
+                            <div class="ai-feature-icon"><i class="bi bi-bandaid"></i></div>
+                            <h4>自动修复</h4>
+                            <p>直接给出可执行的解决命令，复制粘贴即可，无需切换应用。</p>
+                        </div>
+                        <div class="ai-feature">
+                            <div class="ai-feature-icon"><i class="bi bi-magic"></i></div>
+                            <h4>优化脚本</h4>
+                            <p>重构 Shell 脚本、生成一行命令、Bash 转 Zsh，几秒搞定。</p>
+                        </div>
+                        <div class="ai-feature">
+                            <div class="ai-feature-icon"><i class="bi bi-shield-check"></i></div>
+                            <h4>安全审计</h4>
+                            <p>提前发现危险权限、弱加密算法和暴露端口。</p>
+                        </div>
+                    </div>
+
+                    <div class="ai-panel-mock glass-card">
+                        <div class="ai-panel-header">
+                            <span class="ai-dot"></span>
+                            <span>AI 助手</span>
+                            <span class="ai-model-badge">Claude · GPT-4 · Gemini</span>
+                        </div>
+                        <div class="ai-panel-body">
+                            <div class="ai-msg ai-msg-user">
+                                <span>为什么我的 nginx 一直返回 502？</span>
+                            </div>
+                            <div class="ai-msg ai-msg-bot">
+                                <i class="bi bi-stars"></i>
+                                <div>
+                                    <p>502 通常是 nginx 自身可达但上游服务挂了。先运行：</p>
+                                    <code>systemctl status php-fpm</code>
+                                    <p>如果服务未运行，重启它：</p>
+                                    <code>sudo systemctl restart php-fpm</code>
+                                </div>
+                            </div>
+                            <div class="ai-typing">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FEATURES ============ -->
+        <section id="features" class="features reveal">
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-label">功能特性</span>
@@ -185,7 +451,7 @@
                         <span>管理服务器</span><br>
                         <span class="gradient-text">所需的一切</span>
                     </h2>
-                    <p class="section-desc">为开发者、系统管理员和IT专业人员设计的强大功能。</p>
+                    <p class="section-desc">九大专业级工具，集成在一款精美应用中。</p>
                 </div>
 
                 <div class="features-grid">
@@ -195,11 +461,11 @@
                                 <i class="bi bi-terminal"></i>
                             </div>
                             <h3>SSH 终端</h3>
-                            <p>功能完整的终端模拟器，支持颜色、Unicode 和自定义字体。以极快的响应速度执行命令。</p>
+                            <p>功能完整的终端模拟器，支持多标签、配色方案、自定义字体、搜索高亮。底层基于久经考验的 SSH 协议栈。</p>
                             <ul class="feature-list">
-                                <li><i class="bi bi-check2"></i> <span>密码和密钥认证</span></li>
-                                <li><i class="bi bi-check2"></i> <span>多标签会话</span></li>
-                                <li><i class="bi bi-check2"></i> <span>完整终端模拟</span></li>
+                                <li><i class="bi bi-check2"></i> <span>密码与密钥认证</span></li>
+                                <li><i class="bi bi-check2"></i> <span>多标签 & 分屏</span></li>
+                                <li><i class="bi bi-check2"></i> <span>终端内搜索 & AI 辅助</span></li>
                             </ul>
                         </div>
                         <div class="feature-visual">
@@ -209,47 +475,455 @@
                                     <span class="mt-line"><span class="mt-prompt">$</span> docker ps</span>
                                     <span class="mt-line mt-output">CONTAINER ID  IMAGE</span>
                                     <span class="mt-line mt-output">a1b2c3d4e5f6  nginx:latest</span>
+                                    <span class="mt-line"><span class="mt-prompt">$</span> tail -f /var/log/app.log</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-folder2-open"></i>
-                        </div>
+                        <div class="feature-icon"><i class="bi bi-folder2-open"></i></div>
                         <h3>SFTP 文件管理</h3>
-                        <p>直观的双窗格文件浏览器。通过拖放轻松上传、下载、重命名和管理文件。</p>
+                        <p>双窗格浏览器，支持拖放、批量传输队列，预览代码、图片和文档。</p>
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
+                        <div class="feature-icon"><i class="bi bi-diagram-3"></i></div>
                         <h3>端口转发</h3>
-                        <p>配置本地和远程端口转发。创建 SSH 隧道安全访问内部服务。</p>
+                        <p>本地、远程、动态端口转发。通过 SSH 隧道访问内部服务和数据库。</p>
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-key"></i>
-                        </div>
+                        <div class="feature-icon"><i class="bi bi-bookmarks"></i></div>
+                        <h3>命令片段</h3>
+                        <p>保存常用命令，支持变量替换。通过 iCloud 跨设备同步。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-layout-split"></i></div>
+                        <h3>分屏</h3>
+                        <p>横向或纵向分屏运行多个终端。一边看日志一边改配置。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-signpost-2"></i></div>
+                        <h3>跳板机</h3>
+                        <p>通过一台或多台堡垒机连接目标主机。完美应对多跳网络环境。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-globe"></i></div>
+                        <h3>SOCKS5 代理</h3>
+                        <p>一键启动 SSH 动态代理。任何地方都能访问内网。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-key"></i></div>
                         <h3>密钥管理</h3>
-                        <p>导入、生成和管理 SSH 密钥。支持 RSA、ED25519 和加密私钥。</p>
+                        <p>生成、导入、管理 SSH 密钥。支持 RSA、ED25519、P256 与加密私钥。</p>
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-shield-lock"></i>
-                        </div>
+                        <div class="feature-icon"><i class="bi bi-shield-lock"></i></div>
                         <h3>安全设计</h3>
-                        <p>端到端加密。您的密钥和凭据永远不会离开设备。零数据收集政策。</p>
+                        <p>密钥仅存本地，端到端 SSH 加密，零数据收集 — 始终如此。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="platforms" class="platforms">
+        <!-- ============ USE CASES ============ -->
+        <section id="use-cases" class="use-cases reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label">为每种工作流而生</span>
+                    <h2 class="section-title">
+                        <span>贴合开发者</span><br>
+                        <span class="gradient-text">真实的工作方式</span>
+                    </h2>
+                    <p class="section-desc">从 iPad 上的早会，到深夜被 iPhone 收到的告警唤醒 — NaviTerm 始终随你在身边。</p>
+                </div>
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <div class="use-case-icon"><i class="bi bi-cloud-check"></i></div>
+                        <h3>DevOps & SRE</h3>
+                        <p>管理上百台主机，自动化部署，跨集群健康检查 — 让 AI 帮你解读奇怪的内核日志。</p>
+                        <div class="use-case-tags">
+                            <span>多机管理</span>
+                            <span>定时任务</span>
+                            <span>监控告警</span>
+                        </div>
+                    </div>
+                    <div class="use-case-card">
+                        <div class="use-case-icon"><i class="bi bi-code-slash"></i></div>
+                        <h3>后端开发</h3>
+                        <p>SSH 进 staging、tail 日志、用 vim 改配置、一键把 Postgres 端口转发回 Mac 调试。</p>
+                        <div class="use-case-tags">
+                            <span>端口转发</span>
+                            <span>实时日志</span>
+                            <span>SFTP 编辑</span>
+                        </div>
+                    </div>
+                    <div class="use-case-card">
+                        <div class="use-case-icon"><i class="bi bi-shield-lock"></i></div>
+                        <h3>系统管理 & 安全</h3>
+                        <p>审计弱加密算法、一键轮换密钥、定时夜间备份、跳板机多跳访问内网零阻力。</p>
+                        <div class="use-case-tags">
+                            <span>跳板机</span>
+                            <span>密钥审计</span>
+                            <span>定时备份</span>
+                        </div>
+                    </div>
+                    <div class="use-case-card">
+                        <div class="use-case-icon"><i class="bi bi-phone"></i></div>
+                        <h3>值班 & 移动办公</h3>
+                        <p>凌晨告警？掏出 iPhone 就能回滚部署、重启服务、grep 1GB 日志 — 不用打开电脑。</p>
+                        <div class="use-case-tags">
+                            <span>后台保活</span>
+                            <span>Face ID</span>
+                            <span>命令片段</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SCREENSHOTS / MOCKUPS ============ -->
+        <section id="screenshots" class="screenshots reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label">产品演示</span>
+                    <h2 class="section-title">
+                        <span>原生体验</span><br>
+                        <span class="gradient-text">触手可及</span>
+                    </h2>
+                    <p class="section-desc">为 macOS、iPadOS 和 iOS 像素级精雕细琢 — 数据同步、操作一致、体验如一，每一台 Apple 设备都熟悉。</p>
+                </div>
+
+                <!-- Mac hero mockup: 主机侧栏 + SSH 终端 + AI 面板 -->
+                <div class="device-mac">
+                    <div class="device-mac-frame">
+                        <div class="device-mac-camera"></div>
+                        <div class="mac-mockup mac-mockup-hero">
+                            <div class="mockup-titlebar">
+                                <div class="mockup-traffic"><span></span><span></span><span></span></div>
+                                <div class="mockup-title">NaviTerm — 生产环境</div>
+                                <div class="mockup-actions"><i class="bi bi-three-dots"></i></div>
+                            </div>
+                            <div class="mockup-body">
+                                <aside class="mockup-sidebar">
+                                    <div class="mockup-search">
+                                        <i class="bi bi-search"></i>
+                                        <span>筛选主机…</span>
+                                    </div>
+                                    <div class="mockup-section">生产环境</div>
+                                    <div class="mockup-host active">
+                                        <span class="host-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">P</span>
+                                        <span class="host-name">prod-web-01</span>
+                                        <span class="host-dot online"></span>
+                                    </div>
+                                    <div class="mockup-host">
+                                        <span class="host-avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">A</span>
+                                        <span class="host-name">api-gateway</span>
+                                        <span class="host-dot online"></span>
+                                    </div>
+                                    <div class="mockup-host">
+                                        <span class="host-avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">D</span>
+                                        <span class="host-name">db-primary</span>
+                                        <span class="host-dot online"></span>
+                                    </div>
+                                    <div class="mockup-section">测试环境</div>
+                                    <div class="mockup-host">
+                                        <span class="host-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</span>
+                                        <span class="host-name">staging-app</span>
+                                        <span class="host-dot offline"></span>
+                                    </div>
+                                    <div class="mockup-host">
+                                        <span class="host-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">B</span>
+                                        <span class="host-name">backup-srv</span>
+                                        <span class="host-dot online"></span>
+                                    </div>
+                                </aside>
+                                <main class="mockup-main">
+                                    <div class="mockup-tabs">
+                                        <span class="mockup-tab active"><span class="mt-dot"></span>root@prod-web-01</span>
+                                        <span class="mockup-tab">root@api-gateway</span>
+                                        <span class="mockup-tab-add">+</span>
+                                    </div>
+                                    <div class="mockup-terminal">
+                                        <div class="mt-row"><span class="prompt">root@prod-web-01</span>:<span class="path">/var/log</span># <span>tail -f nginx/access.log</span></div>
+                                        <div class="mt-row out">10.0.1.42 - "GET /api/users HTTP/2.0" 200 1284</div>
+                                        <div class="mt-row out">10.0.1.18 - "POST /api/orders HTTP/2.0" 201 89</div>
+                                        <div class="mt-row out err">10.0.1.55 - "GET /api/health HTTP/2.0" 502 0</div>
+                                        <div class="mt-row out err">10.0.1.55 - "GET /api/health HTTP/2.0" 502 0</div>
+                                        <div class="mt-row"><span class="prompt">root@prod-web-01</span>:<span class="path">/var/log</span># <span class="ai-suggested">⚡ ai 为啥 502 突然变多？</span></div>
+                                    </div>
+                                </main>
+                                <aside class="mockup-ai">
+                                    <div class="mockup-ai-header">
+                                        <span class="ai-dot"></span>
+                                        <span>AI 助手</span>
+                                    </div>
+                                    <div class="mockup-ai-msg">14:31 出现 php-fpm 内存不足导致 502 飙升，建议执行：</div>
+                                    <code class="mockup-ai-code">systemctl restart php-fpm</code>
+                                    <div class="mockup-ai-btn"><i class="bi bi-play-fill"></i> <span>运行命令</span></div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="device-mac-base"></div>
+                    <div class="device-mac-stand"></div>
+                    <p class="device-caption">macOS 上完整的运维工作台 — 主机侧栏、多标签终端、AI 助手面板，全部并排呈现。</p>
+                </div>
+
+                <!-- Mac feature pair: AI 面板 + 自动化引擎 -->
+                <div class="screenshot-pair">
+                    <!-- AI 面板 mockup -->
+                    <div class="screenshot-card">
+                        <div class="mac-mockup mac-mockup-mini">
+                            <div class="mockup-titlebar">
+                                <div class="mockup-traffic"><span></span><span></span><span></span></div>
+                                <div class="mockup-title">AI 助手 · Claude</div>
+                            </div>
+                            <div class="mini-ai-body">
+                                <div class="mini-ai-msg user"><span>帮我解释下这个 nginx 报错</span></div>
+                                <div class="mini-ai-msg bot">
+                                    <i class="bi bi-stars"></i>
+                                    <div>
+                                        <p>上游 PHP-FPM socket 没响应，常见三个原因：</p>
+                                        <p class="mini-ai-list">1. PHP-FPM 因内存不足崩溃</p>
+                                        <p class="mini-ai-list">2. nginx.conf 中的 socket 路径写错</p>
+                                        <p class="mini-ai-list">3. socket 文件权限不对</p>
+                                    </div>
+                                </div>
+                                <div class="mini-ai-msg user"><span>修第一个</span></div>
+                                <div class="mini-ai-msg bot">
+                                    <i class="bi bi-stars"></i>
+                                    <div>
+                                        <code>systemctl restart php-fpm</code>
+                                        <code>sysctl vm.overcommit_memory=1</code>
+                                        <p class="mini-ai-tip">→ 点击直接复制或运行</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-caption">
+                            <h4>内置 AI 面板</h4>
+                            <p>在终端旁与 OpenAI、Claude 或 Gemini 对话，提问、修复、解释 — 无需离开 NaviTerm。</p>
+                        </div>
+                    </div>
+
+                    <!-- 自动化 mockup -->
+                    <div class="screenshot-card">
+                        <div class="mac-mockup mac-mockup-mini">
+                            <div class="mockup-titlebar">
+                                <div class="mockup-traffic"><span></span><span></span><span></span></div>
+                                <div class="mockup-title">自动化 · 定时任务</div>
+                            </div>
+                            <div class="mini-auto-body">
+                                <div class="mini-auto-row mini-auto-head">
+                                    <span class="mini-auto-col-name">任务</span>
+                                    <span class="mini-auto-col-host">主机数</span>
+                                    <span class="mini-auto-col-cron">调度</span>
+                                    <span class="mini-auto-col-status">状态</span>
+                                </div>
+                                <div class="mini-auto-row">
+                                    <span class="mini-auto-col-name"><i class="bi bi-database-check"></i> <span>数据库备份</span></span>
+                                    <span class="mini-auto-col-host">3</span>
+                                    <span class="mini-auto-col-cron">0 3 * * *</span>
+                                    <span class="mini-auto-col-status"><span class="status-pill ok">正常</span></span>
+                                </div>
+                                <div class="mini-auto-row">
+                                    <span class="mini-auto-col-name"><i class="bi bi-heart-pulse"></i> <span>健康检查</span></span>
+                                    <span class="mini-auto-col-host">12</span>
+                                    <span class="mini-auto-col-cron">*/5 * * * *</span>
+                                    <span class="mini-auto-col-status"><span class="status-pill ok">正常</span></span>
+                                </div>
+                                <div class="mini-auto-row">
+                                    <span class="mini-auto-col-name"><i class="bi bi-rocket-takeoff"></i> <span>部署 v2.6.9</span></span>
+                                    <span class="mini-auto-col-host">8</span>
+                                    <span class="mini-auto-col-cron">即时</span>
+                                    <span class="mini-auto-col-status"><span class="status-pill running">运行中</span></span>
+                                </div>
+                                <div class="mini-auto-row">
+                                    <span class="mini-auto-col-name"><i class="bi bi-recycle"></i> <span>日志轮转</span></span>
+                                    <span class="mini-auto-col-host">12</span>
+                                    <span class="mini-auto-col-cron">0 0 * * 0</span>
+                                    <span class="mini-auto-col-status"><span class="status-pill scheduled">待运行</span></span>
+                                </div>
+                                <div class="mini-auto-row">
+                                    <span class="mini-auto-col-name"><i class="bi bi-search"></i> <span>安全审计</span></span>
+                                    <span class="mini-auto-col-host">12</span>
+                                    <span class="mini-auto-col-cron">0 4 * * 1</span>
+                                    <span class="mini-auto-col-status"><span class="status-pill ok">正常</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-caption">
+                            <h4>可视化自动化</h4>
+                            <p>定时跑脚本、监控服务器、批量部署 — 干净的可视化任务列表，一目了然。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone trio: 主机列表 / SSH 终端 / SFTP 浏览器 -->
+                <div class="iphone-trio">
+                    <!-- iPhone 主页：主机列表 -->
+                    <div class="device-iphone device-iphone-tilt-left">
+                        <div class="iphone-screen iphone-home">
+                            <div class="iphone-statusbar">
+                                <span class="ios-time">9:41</span>
+                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
+                            </div>
+                            <div class="iphone-app-header">
+                                <h3>主机</h3>
+                                <i class="bi bi-plus-circle-fill"></i>
+                            </div>
+                            <div class="iphone-search">
+                                <i class="bi bi-search"></i>
+                                <span>搜索</span>
+                            </div>
+                            <div class="iphone-host-row">
+                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">P</span>
+                                <div class="ios-host-info">
+                                    <strong>prod-web-01</strong>
+                                    <span>root · 198.51.100.42</span>
+                                </div>
+                                <span class="host-dot online"></span>
+                            </div>
+                            <div class="iphone-host-row">
+                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">A</span>
+                                <div class="ios-host-info">
+                                    <strong>api-gateway</strong>
+                                    <span>deploy · 198.51.100.18</span>
+                                </div>
+                                <span class="host-dot online"></span>
+                            </div>
+                            <div class="iphone-host-row">
+                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">D</span>
+                                <div class="ios-host-info">
+                                    <strong>db-primary</strong>
+                                    <span>postgres · 10.0.0.5</span>
+                                </div>
+                                <span class="host-dot online"></span>
+                            </div>
+                            <div class="iphone-host-row">
+                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</span>
+                                <div class="ios-host-info">
+                                    <strong>staging-app</strong>
+                                    <span>ubuntu · 10.0.0.18</span>
+                                </div>
+                                <span class="host-dot offline"></span>
+                            </div>
+                            <div class="iphone-host-row">
+                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">B</span>
+                                <div class="ios-host-info">
+                                    <strong>backup-srv</strong>
+                                    <span>backup · 10.0.0.99</span>
+                                </div>
+                                <span class="host-dot online"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iPhone 中间：SSH 终端 -->
+                    <div class="device-iphone">
+                        <div class="iphone-screen iphone-terminal">
+                            <div class="iphone-statusbar light">
+                                <span class="ios-time">9:41</span>
+                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
+                            </div>
+                            <div class="iphone-term-header">
+                                <i class="bi bi-chevron-left"></i>
+                                <span class="ios-term-title">root@prod-web-01</span>
+                                <i class="bi bi-stars"></i>
+                            </div>
+                            <div class="iphone-term-body">
+                                <div class="ios-term-line"><span class="prompt">$</span> <span>uptime</span></div>
+                                <div class="ios-term-line out">10:24, up 142d, load: 0.34</div>
+                                <div class="ios-term-line"><span class="prompt">$</span> <span>systemctl status nginx</span></div>
+                                <div class="ios-term-line out">● nginx.service - active (running)</div>
+                                <div class="ios-term-line out ok">  Active: active (running)</div>
+                                <div class="ios-term-line out">  Memory: 24.8M  Tasks: 5</div>
+                                <div class="ios-term-line"><span class="prompt">$</span> <span class="cursor">_</span></div>
+                            </div>
+                            <div class="iphone-term-keys">
+                                <span>esc</span><span>tab</span><span>ctrl</span><span>↑</span><span>↓</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iPhone 右边：SFTP 文件浏览器 -->
+                    <div class="device-iphone device-iphone-tilt-right">
+                        <div class="iphone-screen iphone-sftp">
+                            <div class="iphone-statusbar">
+                                <span class="ios-time">9:41</span>
+                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
+                            </div>
+                            <div class="iphone-sftp-header">
+                                <i class="bi bi-chevron-left"></i>
+                                <span>/var/www/app</span>
+                                <i class="bi bi-arrow-up-circle"></i>
+                            </div>
+                            <div class="iphone-sftp-row">
+                                <i class="bi bi-folder-fill folder"></i>
+                                <span class="sftp-name">config</span>
+                                <span class="sftp-meta">drwx — 4 KB</span>
+                            </div>
+                            <div class="iphone-sftp-row">
+                                <i class="bi bi-folder-fill folder"></i>
+                                <span class="sftp-name">public</span>
+                                <span class="sftp-meta">drwx — 4 KB</span>
+                            </div>
+                            <div class="iphone-sftp-row">
+                                <i class="bi bi-folder-fill folder"></i>
+                                <span class="sftp-name">storage</span>
+                                <span class="sftp-meta">drwx — 4 KB</span>
+                            </div>
+                            <div class="iphone-sftp-row">
+                                <i class="bi bi-file-earmark-code-fill code"></i>
+                                <span class="sftp-name">app.js</span>
+                                <span class="sftp-meta">-rw 12 KB</span>
+                            </div>
+                            <div class="iphone-sftp-row">
+                                <i class="bi bi-file-earmark-text-fill text"></i>
+                                <span class="sftp-name">.env</span>
+                                <span class="sftp-meta">-rw  1 KB</span>
+                            </div>
+                            <div class="iphone-sftp-row">
+                                <i class="bi bi-file-earmark-zip-fill zip"></i>
+                                <span class="sftp-name">backup.tar.gz</span>
+                                <span class="sftp-meta">-rw 240 MB</span>
+                            </div>
+                            <div class="iphone-sftp-toolbar">
+                                <i class="bi bi-cloud-arrow-up-fill"></i>
+                                <i class="bi bi-cloud-arrow-down-fill"></i>
+                                <i class="bi bi-folder-plus"></i>
+                                <i class="bi bi-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="iphone-trio-captions">
+                    <div class="iphone-cap">
+                        <h4>主机一览</h4>
+                        <p>带颜色标识的主机列表与实时在线状态，自动从 Mac 同步。</p>
+                    </div>
+                    <div class="iphone-cap">
+                        <h4>口袋里的完整 SSH</h4>
+                        <p>真实终端，外加扩展按键、命令补全和 AI 辅助。</p>
+                    </div>
+                    <div class="iphone-cap">
+                        <h4>SFTP 文件浏览器</h4>
+                        <p>上传、下载、编辑、预览一应俱全，支持拖放。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PLATFORMS ============ -->
+        <section id="platforms" class="platforms reveal">
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-label">跨平台</span>
@@ -262,34 +936,212 @@
 
                 <div class="platforms-showcase">
                     <div class="platform-card">
-                        <div class="platform-device">
-                            <i class="bi bi-laptop"></i>
-                        </div>
+                        <div class="platform-device"><i class="bi bi-laptop"></i></div>
                         <h3>macOS</h3>
                         <p>原生 Mac 应用，完整支持键盘、Touch Bar 集成和 macOS 快捷键。</p>
                         <span class="platform-badge">支持 Apple Silicon</span>
                     </div>
                     <div class="platform-card platform-featured">
-                        <div class="platform-device">
-                            <i class="bi bi-tablet"></i>
-                        </div>
+                        <div class="platform-device"><i class="bi bi-tablet"></i></div>
                         <h3>iPad</h3>
                         <p>为 iPad 优化，支持键盘、分屏视图和侧拉多任务。</p>
                         <span class="platform-badge">支持台前调度</span>
                     </div>
                     <div class="platform-card">
-                        <div class="platform-device">
-                            <i class="bi bi-phone"></i>
-                        </div>
+                        <div class="platform-device"><i class="bi bi-phone"></i></div>
                         <h3>iPhone</h3>
-                        <p>口袋里的完整 SSH 客户端。快捷操作、小组件和手势导航。</p>
+                        <p>口袋里的完整 SSH 客户端。后台保活、小组件和手势导航。</p>
                         <span class="platform-badge">Face ID / Touch ID</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="languages">
+        <!-- ============ AUTOMATION ============ -->
+        <section id="automation" class="automation reveal">
+            <div class="section-container">
+                <div class="automation-grid">
+                    <div class="automation-text">
+                        <span class="section-label">自动化引擎</span>
+                        <h2 class="section-title">
+                            <span>设置好</span><br>
+                            <span class="gradient-text">就放手</span>
+                        </h2>
+                        <p>定时执行重复性运维任务。可视化编辑器，无需编程基础。内置监控、日志分析、批量部署等模板。</p>
+                        <div class="automation-steps">
+                            <div class="auto-step">
+                                <div class="auto-step-num">01</div>
+                                <div>
+                                    <h5>可视化编辑</h5>
+                                    <p>拖放积木式编辑，无需记语法。</p>
+                                </div>
+                            </div>
+                            <div class="auto-step">
+                                <div class="auto-step-num">02</div>
+                                <div>
+                                    <h5>定时调度</h5>
+                                    <p>按分、按小时、cron 表达式都能跑。</p>
+                                </div>
+                            </div>
+                            <div class="auto-step">
+                                <div class="auto-step-num">03</div>
+                                <div>
+                                    <h5>多机并发</h5>
+                                    <p>同一任务在多台服务器上并发执行。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="automation-visual">
+                        <div class="auto-mock glass-card">
+                            <div class="auto-mock-row auto-mock-header">
+                                <i class="bi bi-calendar-check"></i>
+                                <span>定时任务</span>
+                            </div>
+                            <div class="auto-mock-row auto-mock-task">
+                                <span class="auto-mock-status auto-mock-status-ok"></span>
+                                <span class="auto-mock-name">数据库备份</span>
+                                <span class="auto-mock-cron">0 3 * * *</span>
+                            </div>
+                            <div class="auto-mock-row auto-mock-task">
+                                <span class="auto-mock-status auto-mock-status-ok"></span>
+                                <span class="auto-mock-name">健康检查</span>
+                                <span class="auto-mock-cron">*/5 * * * *</span>
+                            </div>
+                            <div class="auto-mock-row auto-mock-task">
+                                <span class="auto-mock-status auto-mock-status-running"></span>
+                                <span class="auto-mock-name">部署 v2.6.9</span>
+                                <span class="auto-mock-cron auto-mock-running">运行中…</span>
+                            </div>
+                            <div class="auto-mock-row auto-mock-task">
+                                <span class="auto-mock-status"></span>
+                                <span class="auto-mock-name">日志轮转</span>
+                                <span class="auto-mock-cron">0 0 * * 0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SYNC ============ -->
+        <section id="sync" class="sync reveal">
+            <div class="section-container">
+                <div class="sync-grid">
+                    <div class="sync-visual">
+                        <div class="sync-cloud">
+                            <i class="bi bi-cloud-fill"></i>
+                            <span class="sync-cloud-label">iCloud</span>
+                        </div>
+                        <div class="sync-line sync-line-1"></div>
+                        <div class="sync-line sync-line-2"></div>
+                        <div class="sync-line sync-line-3"></div>
+                        <div class="sync-device sync-device-mac">
+                            <i class="bi bi-laptop"></i>
+                            <span>Mac</span>
+                        </div>
+                        <div class="sync-device sync-device-ipad">
+                            <i class="bi bi-tablet"></i>
+                            <span>iPad</span>
+                        </div>
+                        <div class="sync-device sync-device-iphone">
+                            <i class="bi bi-phone"></i>
+                            <span>iPhone</span>
+                        </div>
+                    </div>
+                    <div class="sync-text">
+                        <span class="section-label">iCloud 同步 · 后台保活</span>
+                        <h2 class="section-title">
+                            <span>始终在你身边，</span><br>
+                            <span class="gradient-text">永不掉线</span>
+                        </h2>
+                        <p>主机、命令片段、配置在所有 Apple 设备间实时同步。SSH 会话后台持续运行 — 切换应用、锁屏都不掉线。</p>
+                        <ul class="sync-list">
+                            <li><i class="bi bi-check-circle-fill"></i> <span>主机 & 命令片段实时同步</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <span>SSH/SFTP/端口转发后台保活</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <span>端到端加密</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <span>零账号，零服务器</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SECURITY ARCHITECTURE ============ -->
+        <section id="security" class="security reveal">
+            <div class="section-container">
+                <div class="security-grid">
+                    <div class="security-text">
+                        <span class="section-label">安全 & 隐私</span>
+                        <h2 class="section-title">
+                            <span>你的密钥，</span><br>
+                            <span class="gradient-text">你的数据，仅此而已。</span>
+                        </h2>
+                        <p>NaviTerm 以隐私优先为原则构建。所有秘密都留在你的设备里，或通过 Apple 端到端加密的 iCloud 同步。我们没有可被攻破的服务器 — 因为我们根本没有服务器。</p>
+                        <ul class="security-points">
+                            <li>
+                                <i class="bi bi-key-fill"></i>
+                                <div>
+                                    <h5>密钥存于安全飞地</h5>
+                                    <p>私钥保存在 iOS / macOS 钥匙串 — 由 Face ID、Touch ID 或设备密码保护。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-cloud-lock-fill"></i>
+                                <div>
+                                    <h5>Apple 端到端 iCloud</h5>
+                                    <p>同步基于 CloudKit + 高级数据保护。Apple 看不到你的主机信息，我们更看不到。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-eye-slash-fill"></i>
+                                <div>
+                                    <h5>零遥测</h5>
+                                    <p>没有分析 SDK，没有会发命令的崩溃报告器，没有"匿名"使用数据。一个都没有。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-person-x-fill"></i>
+                                <div>
+                                    <h5>无 NaviTerm 账号</h5>
+                                    <p>无邮箱、无密码、无个人资料。用 Apple ID 登录即可 — 仅此而已。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="security-visual">
+                        <div class="security-diagram">
+                            <div class="sec-node sec-node-device">
+                                <i class="bi bi-laptop"></i>
+                                <strong>你的设备</strong>
+                                <span>密钥在钥匙串</span>
+                            </div>
+                            <div class="sec-link sec-link-encrypted">
+                                <span>SSH · 256位 · 直连</span>
+                                <div class="sec-link-arrow"></div>
+                            </div>
+                            <div class="sec-node sec-node-server">
+                                <i class="bi bi-hdd-rack"></i>
+                                <strong>你的服务器</strong>
+                                <span>没有中间商</span>
+                            </div>
+                            <div class="sec-cloud">
+                                <i class="bi bi-cloud-lock"></i>
+                                <strong>Apple iCloud</strong>
+                                <span>端到端加密同步</span>
+                            </div>
+                            <div class="sec-no">
+                                <i class="bi bi-x-circle"></i>
+                                <span>无 NaviTerm 服务器</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ LANGUAGES ============ -->
+        <section class="languages reveal">
             <div class="section-container">
                 <div class="languages-content">
                     <div class="languages-text">
@@ -298,7 +1150,7 @@
                             <span>使用您的</span><br>
                             <span class="gradient-text">母语</span>
                         </h2>
-                        <p>NaviTerm 支持 20 多种语言，包括中文、英语、日语、韩语、德语、法语、西班牙语、阿拉伯语等。</p>
+                        <p>NaviTerm 支持 25+ 种语言，包括中文、英语、日语、韩语、德语、法语、西班牙语、俄语、阿拉伯语等。</p>
                     </div>
                     <div class="languages-grid">
                         <span>简体中文</span>
@@ -313,89 +1165,396 @@
                         <span>Português</span>
                         <span>Русский</span>
                         <span>العربية</span>
-                        <span class="lang-more">+8 更多</span>
+                        <span>Türkçe</span>
+                        <span>हिन्दी</span>
+                        <span class="lang-more">+11 更多</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="pricing">
+        <!-- ============ TESTIMONIALS ============ -->
+        <section id="testimonials" class="testimonials reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label">开发者好评</span>
+                    <h2 class="section-title">
+                        <span>大家如何评价</span><br>
+                        <span class="gradient-text">NaviTerm</span>
+                    </h2>
+                </div>
+                <div class="quotes-grid">
+                    <figure class="quote-card">
+                        <div class="quote-stars">★★★★★</div>
+                        <blockquote>"用了 4 年 Termius 才换过来。AI 面板帮我排查问题省下的时间，已经远超买断价。"</blockquote>
+                        <figcaption>
+                            <div class="avatar" style="background:linear-gradient(135deg,#6366f1,#d946ef)">A</div>
+                            <div>
+                                <strong>Alex M.</strong>
+                                <span>DevOps 负责人</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="quote-card">
+                        <div class="quote-stars">★★★★★</div>
+                        <blockquote>"iPhone 后台保活就是杀手锏。在咖啡馆从手机重启了线上服务，电脑还在家里。"</blockquote>
+                        <figcaption>
+                            <div class="avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">S</div>
+                            <div>
+                                <strong>Sarah K.</strong>
+                                <span>后端工程师</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="quote-card">
+                        <div class="quote-stars">★★★★★</div>
+                        <blockquote>"价格非常实在。$5.99/年无限主机，或 $29.99 终身买断。没有什么"企业版"套路。"</blockquote>
+                        <figcaption>
+                            <div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">M</div>
+                            <div>
+                                <strong>Marcus W.</strong>
+                                <span>资深系统管理员</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="quote-card">
+                        <div class="quote-stars">★★★★★</div>
+                        <blockquote>"iCloud 同步开箱即用。Mac 上添加的主机，iPad 上一打开就在。零配置，零账号。"</blockquote>
+                        <figcaption>
+                            <div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">D</div>
+                            <div>
+                                <strong>David R.</strong>
+                                <span>云架构师</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="quote-card">
+                        <div class="quote-stars">★★★★★</div>
+                        <blockquote>"AI 用大白话解释了我自己写的 crontab。终于看懂自己的脚本了。"</blockquote>
+                        <figcaption>
+                            <div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">P</div>
+                            <div>
+                                <strong>Priya S.</strong>
+                                <span>全栈开发</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="quote-card">
+                        <div class="quote-stars">★★★★★</div>
+                        <blockquote>"在可视化自动化编辑器里搭了个五步部署流水线，没写一行 bash。"</blockquote>
+                        <figcaption>
+                            <div class="avatar" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">J</div>
+                            <div>
+                                <strong>Jennifer L.</strong>
+                                <span>移动端工程师</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PRICING ============ -->
+        <section id="pricing" class="pricing reveal">
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-label">价格</span>
                     <h2 class="section-title">
-                        <span>简单</span><br>
-                        <span class="gradient-text">透明的定价</span>
+                        <span>透明定价</span><br>
+                        <span class="gradient-text">没有套路</span>
                     </h2>
-                    <p class="section-desc">免费开始，按需升级。</p>
+                    <p class="section-desc">免费版 5 个主机用着先。需要更多时升级 — 月付、年付省一半，或一次买断终身。</p>
                 </div>
 
-                <div class="pricing-grid">
+                <div class="pricing-grid pricing-grid-4">
+                    <!-- Free -->
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>免费版</h3>
                             <div class="pricing-price">
-                                <span class="price">¥0</span>
-                                <span class="period">永久免费</span>
+                                <div class="price-line">
+                                    <span class="currency">$</span>
+                                    <span class="price-num">0</span>
+                                </div>
+                                <span class="period">永久免费 — 不用绑卡</span>
                             </div>
                         </div>
                         <ul class="pricing-features">
                             <li><i class="bi bi-check2"></i> <span>最多 5 个主机</span></li>
-                            <li><i class="bi bi-check2"></i> <span>SSH 终端</span></li>
-                            <li><i class="bi bi-check2"></i> <span>SFTP 文件管理</span></li>
-                            <li><i class="bi bi-check2"></i> <span>端口转发</span></li>
+                            <li><i class="bi bi-check2"></i> <span>全部核心功能</span></li>
+                            <li><i class="bi bi-check2"></i> <span>SFTP、端口转发、命令片段</span></li>
+                            <li><i class="bi bi-check2"></i> <span>可接入自有 AI 密钥</span></li>
                             <li><i class="bi bi-check2"></i> <span>密钥管理</span></li>
                         </ul>
-                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-outline btn-full" target="_blank">立即开始</a>
+                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-outline btn-full" target="_blank" rel="noopener">立即开始</a>
                     </div>
 
-                    <div class="pricing-card pricing-featured">
-                        <div class="pricing-badge">最受欢迎</div>
+                    <!-- Monthly -->
+                    <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3>Pro 月付</h3>
+                            <h3>月付</h3>
                             <div class="pricing-price">
-                                <span class="price">¥6</span>
-                                <span class="period">/月</span>
+                                <div class="price-line">
+                                    <span class="currency">$</span>
+                                    <span class="price-num">0.99</span>
+                                </div>
+                                <span class="period">每月 · 随时取消</span>
                             </div>
                         </div>
                         <ul class="pricing-features">
                             <li><i class="bi bi-check2"></i> <span><strong>无限</strong>主机</span></li>
-                            <li><i class="bi bi-check2"></i> <span>包含免费版所有功能</span></li>
+                            <li><i class="bi bi-check2"></i> <span>包含免费版全部功能</span></li>
                             <li><i class="bi bi-check2"></i> <span>离线模式</span></li>
                             <li><i class="bi bi-check2"></i> <span>优先支持</span></li>
-                            <li><i class="bi bi-check2"></i> <span>抢先体验新功能</span></li>
+                            <li><i class="bi bi-check2"></i> <span>App Store 中随时取消</span></li>
                         </ul>
-                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-primary btn-full" target="_blank">立即订阅</a>
+                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-outline btn-full" target="_blank" rel="noopener">订阅月付</a>
                     </div>
 
-                    <div class="pricing-card">
-                        <div class="pricing-save">省 75%</div>
+                    <!-- Yearly (最受欢迎) -->
+                    <div class="pricing-card pricing-featured">
+                        <div class="pricing-badge">最受欢迎</div>
+                        <div class="pricing-save">省 50%</div>
                         <div class="pricing-header">
-                            <h3>Pro 年付</h3>
+                            <h3>年付</h3>
                             <div class="pricing-price">
-                                <span class="price">¥18</span>
-                                <span class="period">/年</span>
+                                <div class="price-line">
+                                    <span class="currency">$</span>
+                                    <span class="price-num">5.99</span>
+                                </div>
+                                <span class="period">每年 ≈ $0.50 / 月</span>
                             </div>
                         </div>
                         <ul class="pricing-features">
                             <li><i class="bi bi-check2"></i> <span><strong>无限</strong>主机</span></li>
-                            <li><i class="bi bi-check2"></i> <span>包含月付版所有功能</span></li>
-                            <li><i class="bi bi-check2"></i> <span>最超值</span></li>
+                            <li><i class="bi bi-check2"></i> <span>包含月付版全部功能</span></li>
+                            <li><i class="bi bi-check2"></i> <span>比月付便宜 50%</span></li>
                             <li><i class="bi bi-check2"></i> <span>优先支持</span></li>
-                            <li><i class="bi bi-check2"></i> <span>所有未来更新</span></li>
+                            <li><i class="bi bi-check2"></i> <span>包含本年度全部更新</span></li>
                         </ul>
-                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-outline btn-full" target="_blank">获取年付</a>
+                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-primary btn-full" target="_blank" rel="noopener">购买年付</a>
+                    </div>
+
+                    <!-- Lifetime -->
+                    <div class="pricing-card pricing-lifetime">
+                        <div class="pricing-badge pricing-badge-lifetime">最超值</div>
+                        <div class="pricing-header">
+                            <h3>终身买断</h3>
+                            <div class="pricing-price">
+                                <div class="price-line">
+                                    <span class="currency">$</span>
+                                    <span class="price-num">29.99</span>
+                                </div>
+                                <span class="period">一次付款 · 永久使用</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-gem"></i> <span><strong>永久</strong>无限主机</span></li>
+                            <li><i class="bi bi-gem"></i> <span>包含年付版全部功能</span></li>
+                            <li><i class="bi bi-gem"></i> <span>所有未来更新都包含</span></li>
+                            <li><i class="bi bi-gem"></i> <span>大约 5 年回本</span></li>
+                            <li><i class="bi bi-gem"></i> <span>告别订阅疲劳</span></li>
+                        </ul>
+                        <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-gradient btn-full" target="_blank" rel="noopener">买断终身</a>
+                    </div>
+                </div>
+
+                <p class="pricing-footnote">所有价格以美元计价。本地货币与税费以 App Store 实际显示为准。Apple 负责计费与退款 — 我们看不到你的银行卡信息。</p>
+            </div>
+        </section>
+
+        <!-- ============ COMPARISON ============ -->
+        <section id="comparison" class="comparison reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label">产品对比</span>
+                    <h2 class="section-title">
+                        <span>为什么开发者选择</span><br>
+                        <span class="gradient-text">NaviTerm</span>
+                    </h2>
+                    <p class="section-desc">与 Apple 平台主流 SSH 客户端的客观、真实对比。</p>
+                </div>
+
+                <div class="cmp-table-wrap">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th>功能</th>
+                                <th class="cmp-self">NaviTerm</th>
+                                <th>Termius</th>
+                                <th>ServerCat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>内置 AI 助手</td>
+                                <td class="cmp-self"><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                            </tr>
+                            <tr>
+                                <td>可视化自动化引擎</td>
+                                <td class="cmp-self"><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><span class="cmp-partial">仅 Pro 版</span></td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                            </tr>
+                            <tr>
+                                <td>iCloud 同步（无需账号）</td>
+                                <td class="cmp-self"><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><span class="cmp-partial">基于账号</span></td>
+                                <td><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                            </tr>
+                            <tr>
+                                <td>iOS 后台保活</td>
+                                <td class="cmp-self"><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                            </tr>
+                            <tr>
+                                <td>跳板机 / SOCKS5 代理</td>
+                                <td class="cmp-self"><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                            </tr>
+                            <tr>
+                                <td>原生支持 Mac · iPad · iPhone</td>
+                                <td class="cmp-self"><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                            </tr>
+                            <tr>
+                                <td>月付价格</td>
+                                <td class="cmp-self cmp-price">$0.99</td>
+                                <td class="cmp-price-bad">$9.99</td>
+                                <td>$1.49</td>
+                            </tr>
+                            <tr>
+                                <td>年付价格</td>
+                                <td class="cmp-self cmp-price">$5.99</td>
+                                <td class="cmp-price-bad">$89.88</td>
+                                <td>$14.99</td>
+                            </tr>
+                            <tr>
+                                <td>一次性买断 / 终身版</td>
+                                <td class="cmp-self cmp-price">$29.99</td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                                <td><i class="bi bi-x-circle cmp-no"></i></td>
+                            </tr>
+                            <tr>
+                                <td>零数据收集</td>
+                                <td class="cmp-self"><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                                <td><span class="cmp-partial">服务端存储</span></td>
+                                <td><i class="bi bi-check-circle-fill cmp-yes"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="cmp-disclaimer">* 对比数据基于撰写时公开信息整理。商标归各自所有者所有。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section id="faq" class="faq reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-label">常见问题</span>
+                    <h2 class="section-title">
+                        <span>常见</span><br>
+                        <span class="gradient-text">问题解答</span>
+                    </h2>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary><span>NaviTerm 真的免费吗？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>是的。免费版支持最多 5 个主机，包含全部核心功能 — SSH、SFTP、端口转发、命令片段，以及自有 AI 密钥接入。Pro 版仅解锁无限主机和离线模式。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>Pro 版到底多少钱？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>月付 $0.99、年付 $5.99（比月付省 50%），或者 $29.99 一次性买断终身。买断价大约 5 年回本，并包含所有未来更新。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>"终身买断"真的是终身吗？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>是的 — 一次付款，永远享用 NaviTerm 所有未来版本。绑定的是你的 Apple ID。只要你能从 App Store 重新下载本应用，Pro 功能就一直有效。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>我的 SSH 密钥安全吗？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>绝对安全。私钥存储在 iOS / macOS Keychain，永远不会离开你的设备。我们零数据收集 — 没有遥测，不分析你的会话。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>支持哪些密钥类型？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>支持 RSA、ED25519、P256 ECDSA，以及 OpenSSH 格式的加密私钥。同时支持密码认证和键盘交互（2FA）。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>跨设备同步怎么工作？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>NaviTerm 使用 CloudKit（iCloud）— 数据通过你的 Apple ID 端到端同步。无需 NaviTerm 账号，无 NaviTerm 服务器。可在设置中随时关闭。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>后台保活会耗电吗？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>我们高效使用 iOS Background Tasks 和 BGProcessingTask API。空闲 SSH 会话耗电极低，相当于一个暂停状态的音乐应用。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>可以从 Termius 导入吗？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>可以 — 同时支持 Termius 的 JSON 导出和 OpenSSH config 导入。多数用户 5 分钟内完成迁移。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>AI 助手要额外付费吗？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>不需要。NaviTerm 本身不为 AI 收费。你只需接入自己的 OpenAI / Anthropic / Gemini API Key，直接付费给 AI 服务商 — 一般使用每月仅几毛钱。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>支持哪些 AI 服务商？</span><i class="bi bi-plus-lg"></i></summary>
+                        <p>OpenAI、Anthropic、Google Gemini，以及任何兼容 OpenAI 协议的端点（LocalAI、Groq、DeepSeek、OpenRouter 等）。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ COMMUNITY ============ -->
+        <section id="community" class="community reveal">
+            <div class="section-container">
+                <div class="community-card glass-card">
+                    <div class="community-text">
+                        <span class="section-label">社区</span>
+                        <h2 class="section-title">
+                            <span>加入开发者</span><br>
+                            <span class="gradient-text">一起用 NaviTerm 创造</span>
+                        </h2>
+                        <p>获取版本更新、分享技巧、与团队交流 — 都在这里。</p>
+                    </div>
+                    <div class="community-buttons">
+                        <a href="https://t.me/NavitermNews" target="_blank" class="community-btn" rel="noopener">
+                            <i class="bi bi-megaphone-fill"></i>
+                            <div>
+                                <strong>Telegram 频道</strong>
+                                <span>版本发布与新闻</span>
+                            </div>
+                        </a>
+                        <a href="https://t.me/NaviTermCommunity" target="_blank" class="community-btn" rel="noopener">
+                            <i class="bi bi-chat-dots-fill"></i>
+                            <div>
+                                <strong>Telegram 讨论组</strong>
+                                <span>技巧与支持</span>
+                            </div>
+                        </a>
+                        <a href="mailto:support@trivix.cn" class="community-btn">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div>
+                                <strong>邮件支持</strong>
+                                <span>support@trivix.cn</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ============ CTA ============ -->
         <section id="download" class="cta">
             <div class="section-container">
                 <div class="cta-content">
                     <h2>准备好掌控<br>您的服务器了吗？</h2>
-                    <p>免费下载 NaviTerm，体验 Apple 设备上最好的 SSH 客户端。</p>
-                    <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-large btn-white" target="_blank">
+                    <p>下载 NaviTerm，免费版 5 个主机随便用。月付 $0.99 起解锁无限主机，或 $29.99 买断终身。</p>
+                    <a href="https://apps.apple.com/cn/app/naviterm/id6747072398" class="btn btn-large btn-white" target="_blank" rel="noopener">
                         <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                         </svg>
@@ -411,48 +1570,54 @@
             <div class="footer-main">
                 <div class="footer-brand">
                     <a href="/zh/" class="footer-logo">
-                        <img src="../assets/app_icon.png" alt="NaviTerm logo" class="logo-image" width="40" height="40" decoding="async">
+                        <img src="../assets/app_icon-96.png" alt="NaviTerm logo" class="logo-image" width="40" height="40" decoding="async">
                         <span>NaviTerm</span>
                     </a>
-                    <p>专为 Apple 生态系统打造的专业 SSH 和 SFTP 客户端。</p>
+                    <p>专为 Apple 生态打造的 AI 智能 SSH 客户端。</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
                         <h4>产品</h4>
+                        <a href="#ai">AI 助手</a>
                         <a href="#features">功能</a>
                         <a href="#pricing">价格</a>
                         <a href="#download">下载</a>
                     </div>
                     <div class="footer-col">
-                        <h4>公司</h4>
-                        <a href="#">关于我们</a>
+                        <h4>社区</h4>
+                        <a href="https://t.me/NavitermNews" target="_blank" rel="noopener">Telegram 频道</a>
+                        <a href="https://t.me/NaviTermCommunity" target="_blank" rel="noopener">Telegram 讨论组</a>
                         <a href="mailto:support@trivix.cn">联系我们</a>
                     </div>
                     <div class="footer-col">
                         <h4>法律</h4>
                         <a href="../NaviTerm_Privacy_Policy.html">隐私政策</a>
-                        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">服务条款</a>
+                        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">服务条款</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2025 武汉特维克斯科技有限公司 版权所有</p>
-                <div class="footer-beian" style="display: flex;">
-                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42018502008154" target="_blank">
+                <div class="footer-beian">
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42018502008154" target="_blank" rel="noopener">
                         <img src="https://cdn.jsdelivr.net/gh/xiaozhuai/express-static@master/beian_icon.png" alt="">
                         鄂公网安备 42018502008154号
                     </a>
                     <span>|</span>
-                    <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2025143487号-1</a>
+                    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鄂ICP备2025143487号-1</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <nav class="mobile-bottom-nav">
-        <a href="/zh/" class="mobile-nav-item active">
+        <a href="#" class="mobile-nav-item active">
             <i class="bi bi-house"></i>
             <span>首页</span>
+        </a>
+        <a href="#ai" class="mobile-nav-item">
+            <i class="bi bi-stars"></i>
+            <span>AI</span>
         </a>
         <a href="#features" class="mobile-nav-item">
             <i class="bi bi-grid"></i>

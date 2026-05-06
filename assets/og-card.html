@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NaviTerm — OG card export (1200×630)</title>
+<style>
+    *,
+    *::before,
+    *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+        background: #1a1a1a;
+        font-family: -apple-system, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+        color: #fff;
+    }
+
+    /* Export mode: ?export=1 strips the toolbar and pins the card top-left so
+       headless browsers can capture exactly 1200×630 with no chrome. */
+    body.export-mode .toolbar { display: none; }
+    body.export-mode {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+    }
+    body.export-mode .card {
+        margin: 0;
+    }
+
+    /* Toolbar with export instructions */
+    .toolbar {
+        max-width: 1200px;
+        margin: 24px auto 16px;
+        padding: 16px 20px;
+        background: #0f0f10;
+        border: 1px solid #2a2a2a;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #d4d4d4;
+    }
+    .toolbar code {
+        background: #262626;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'SF Mono', monospace;
+        font-size: 13px;
+        color: #f0abfc;
+    }
+    .toolbar strong { color: #fff; }
+    .toolbar a { color: #a5b4fc; }
+
+    /* The card itself: exactly 1200×630 */
+    .card {
+        width: 1200px;
+        height: 630px;
+        margin: 0 auto;
+        position: relative;
+        background:
+            radial-gradient(ellipse 60% 40% at 20% 30%, rgba(99, 102, 241, 0.3) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 40% at 80% 80%, rgba(217, 70, 239, 0.25) 0%, transparent 60%),
+            linear-gradient(135deg, #0a0a0a 0%, #0d0a1f 50%, #0a0a0a 100%);
+        overflow: hidden;
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+        opacity: 0.7;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: 290px 1fr;
+        gap: 60px;
+        padding: 90px 90px 70px;
+        height: 100%;
+    }
+
+    .card-icon {
+        width: 200px;
+        height: 200px;
+        margin-top: 90px;
+        border-radius: 44px;
+        background: linear-gradient(135deg, #6366f1, #d946ef);
+        box-shadow: 0 30px 60px -15px rgba(99, 102, 241, 0.5),
+                    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'SF Mono', Menlo, monospace;
+        font-size: 56px;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+    }
+
+    .card-icon::after {
+        content: '✦';
+        position: absolute;
+        top: 36px;
+        right: 36px;
+        font-size: 28px;
+        line-height: 1;
+        color: #fff;
+        opacity: 0.95;
+    }
+
+    .card-text {
+        padding-top: 30px;
+    }
+
+    .card-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 16px;
+        background: rgba(99, 102, 241, 0.15);
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #a5b4fc;
+        margin-bottom: 26px;
+    }
+    .card-eyebrow .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #a5b4fc;
+        box-shadow: 0 0 8px #a5b4fc;
+    }
+
+    .card-brand {
+        font-size: 56px;
+        font-weight: 800;
+        letter-spacing: -2px;
+        line-height: 1;
+        margin-bottom: 18px;
+    }
+
+    .card-title-line {
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 1.15;
+    }
+
+    .card-title-line.gradient {
+        background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .card-sub {
+        font-size: 19px;
+        color: #a3a3a3;
+        line-height: 1.55;
+        margin-top: 24px;
+    }
+
+    .card-sub strong {
+        color: #d4d4d4;
+        font-weight: 500;
+    }
+
+    .card-pills {
+        display: flex;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .card-pills span {
+        padding: 8px 22px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #e5e5e5;
+    }
+
+    .card-url {
+        position: absolute;
+        bottom: 28px;
+        right: 36px;
+        font-family: 'SF Mono', Menlo, monospace;
+        font-size: 16px;
+        font-weight: 500;
+        color: #737375;
+    }
+</style>
+</head>
+<body>
+    <script>
+        // Auto-enable export mode when the page is loaded with ?export=1
+        if (location.search.indexOf('export=1') !== -1) {
+            document.documentElement.classList.add('export-mode');
+            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('export-mode'));
+        }
+    </script>
+    <div class="toolbar">
+        <strong>Export this card to <code>assets/og-card.png</code> (1200 × 630):</strong>
+        Open this file in Chrome or Safari → DevTools → Cmd+Shift+P → run <code>Capture node screenshot</code> on the <code>.card</code> element.
+        Or use macOS screencap on the card itself: select region with Cmd+Shift+4. The card below is exactly 1200×630 px.
+        Once you have <code>og-card.png</code>, the meta tags already point to it.
+    </div>
+
+    <div class="card">
+        <div class="card-grid">
+            <div class="card-icon">&gt;_</div>
+            <div class="card-text">
+                <div class="card-eyebrow">
+                    <span class="dot"></span>
+                    AI Copilot built-in · Lifetime $29.99
+                </div>
+                <div class="card-brand">NaviTerm</div>
+                <div class="card-title-line">The AI-powered SSH client</div>
+                <div class="card-title-line gradient">for all Apple devices</div>
+                <div class="card-sub">
+                    SSH · SFTP · Port forward · Automation · iCloud sync<br>
+                    Free for 5 hosts · <strong>Monthly $0.99 · Yearly $5.99 · Lifetime $29.99</strong>
+                </div>
+                <div class="card-pills">
+                    <span>macOS</span>
+                    <span>iPad</span>
+                    <span>iPhone</span>
+                </div>
+            </div>
+        </div>
+        <div class="card-url">www.trivix.cn</div>
+    </div>
+</body>
+</html>

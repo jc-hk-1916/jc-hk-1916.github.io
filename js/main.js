@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const langSwitch = document.getElementById('langSwitch');
     const langSwitchMobile = document.getElementById('langSwitchMobile');
 
+    // ---------- Sticky nav background ----------
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             nav.classList.add('scrolled');
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // ---------- Mobile menu ----------
     if (navToggle && mobileMenu) {
         navToggle.addEventListener('click', () => {
             navToggle.classList.toggle('active');
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ---------- Language switcher ----------
     if (langSwitch) {
         langSwitch.addEventListener('click', () => {
             toggleLanguage();
@@ -46,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ---------- Smooth-scroll anchor ----------
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -65,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // ---------- Mobile viewport height fix ----------
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -73,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
+    // ---------- Bottom nav active state ----------
     const bottomNavItems = document.querySelectorAll('.mobile-bottom-nav .mobile-nav-item');
     const sections = document.querySelectorAll('section[id]');
 
@@ -101,4 +107,69 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', updateBottomNav);
     updateBottomNav();
+
+    // ---------- Scroll-reveal animation (IntersectionObserver) ----------
+    if ('IntersectionObserver' in window) {
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        });
+
+        revealEls.forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback: show everything for very old browsers
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
+    }
+
+    // ---------- FAQ accordion: only one open at a time ----------
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.addEventListener('toggle', () => {
+            if (item.open) {
+                faqItems.forEach(other => {
+                    if (other !== item && other.open) {
+                        other.open = false;
+                    }
+                });
+            }
+        });
+    });
+
+    // ---------- Animated count-up for hero stats (subtle) ----------
+    const statNums = document.querySelectorAll('.stat-num');
+    if (statNums.length && 'IntersectionObserver' in window) {
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const text = el.textContent.trim();
+                    // Only animate plain integers like "25"
+                    const match = text.match(/^(\d+)(\D*)$/);
+                    if (match) {
+                        const target = parseInt(match[1], 10);
+                        const suffix = match[2];
+                        let current = 0;
+                        const step = Math.max(1, Math.ceil(target / 30));
+                        const tick = () => {
+                            current = Math.min(target, current + step);
+                            el.textContent = current + suffix;
+                            if (current < target) requestAnimationFrame(tick);
+                        };
+                        tick();
+                    }
+                    statObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNums.forEach(el => statObserver.observe(el));
+    }
 });

@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Block staging / duplicate / test pages from being indexed
+Disallow: /privacy_test.html
+Disallow: /privacy_active.html
+Disallow: /compare.html
+Disallow: /404.html
+Disallow: /assets/screenshots/
+
 Sitemap: https://www.trivix.cn/sitemap.xml
