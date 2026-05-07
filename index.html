@@ -665,76 +665,14 @@
                     <p class="section-desc" data-i18n="screenshots.desc">Crafted pixel-by-pixel for macOS, iPadOS and iOS — the same data, the same workflow, the same comfort, on every device.</p>
                 </div>
 
-                <!-- Mac hero mockup: shows host sidebar + SSH terminal + AI panel -->
+                <!-- Mac hero screenshot: shows the real NaviTerm macOS interface -->
                 <div class="device-mac">
                     <div class="device-mac-frame">
                         <div class="device-mac-camera"></div>
-                        <div class="mac-mockup mac-mockup-hero">
-                            <div class="mockup-titlebar">
-                                <div class="mockup-traffic"><span></span><span></span><span></span></div>
-                                <div class="mockup-title">NaviTerm — production fleet</div>
-                                <div class="mockup-actions"><i class="bi bi-three-dots"></i></div>
-                            </div>
-                            <div class="mockup-body">
-                                <aside class="mockup-sidebar">
-                                    <div class="mockup-search">
-                                        <i class="bi bi-search"></i>
-                                        <span data-i18n="mock.search">Filter hosts…</span>
-                                    </div>
-                                    <div class="mockup-section" data-i18n="mock.prod">PRODUCTION</div>
-                                    <div class="mockup-host active">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">P</span>
-                                        <span class="host-name">prod-web-01</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">A</span>
-                                        <span class="host-name">api-gateway</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">D</span>
-                                        <span class="host-name">db-primary</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                    <div class="mockup-section" data-i18n="mock.staging">STAGING</div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</span>
-                                        <span class="host-name">staging-app</span>
-                                        <span class="host-dot offline"></span>
-                                    </div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">B</span>
-                                        <span class="host-name">backup-srv</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                </aside>
-                                <main class="mockup-main">
-                                    <div class="mockup-tabs">
-                                        <span class="mockup-tab active"><span class="mt-dot"></span>root@prod-web-01</span>
-                                        <span class="mockup-tab">root@api-gateway</span>
-                                        <span class="mockup-tab-add">+</span>
-                                    </div>
-                                    <div class="mockup-terminal">
-                                        <div class="mt-row"><span class="prompt">root@prod-web-01</span>:<span class="path">/var/log</span># <span>tail -f nginx/access.log</span></div>
-                                        <div class="mt-row out">10.0.1.42 - "GET /api/users HTTP/2.0" 200 1284</div>
-                                        <div class="mt-row out">10.0.1.18 - "POST /api/orders HTTP/2.0" 201 89</div>
-                                        <div class="mt-row out err">10.0.1.55 - "GET /api/health HTTP/2.0" 502 0</div>
-                                        <div class="mt-row out err">10.0.1.55 - "GET /api/health HTTP/2.0" 502 0</div>
-                                        <div class="mt-row"><span class="prompt">root@prod-web-01</span>:<span class="path">/var/log</span># <span class="ai-suggested">⚡ ai why are 502s spiking?</span></div>
-                                    </div>
-                                </main>
-                                <aside class="mockup-ai">
-                                    <div class="mockup-ai-header">
-                                        <span class="ai-dot"></span>
-                                        <span>AI Copilot</span>
-                                    </div>
-                                    <div class="mockup-ai-msg" data-i18n="mock.aiMsg">Spike in 502s correlates with php-fpm OOM at 14:31. Suggested fix:</div>
-                                    <code class="mockup-ai-code">systemctl restart php-fpm</code>
-                                    <div class="mockup-ai-btn"><i class="bi bi-play-fill"></i> <span data-i18n="mock.run">Run command</span></div>
-                                </aside>
-                            </div>
-                        </div>
+                        <img src="assets/screenshots/mac-hero.jpg"
+                             alt="NaviTerm on macOS — host sidebar, multi-tab SSH terminals, and AI Copilot panel side by side"
+                             class="device-mac-img"
+                             width="1600" height="1000" loading="lazy">
                     </div>
                     <div class="device-mac-base"></div>
                     <div class="device-mac-stand"></div>
@@ -743,34 +681,17 @@
 
                 <!-- Mac feature pair: AI panel + Automation engine -->
                 <div class="screenshot-pair">
-                    <!-- AI panel mockup: matches caption "Built-in AI Panel — Ask, fix, explain" -->
+                    <!-- AI panel screenshot -->
                     <div class="screenshot-card">
-                        <div class="mac-mockup mac-mockup-mini">
+                        <div class="screenshot-img-wrap">
                             <div class="mockup-titlebar">
                                 <div class="mockup-traffic"><span></span><span></span><span></span></div>
-                                <div class="mockup-title">AI Copilot · Claude</div>
+                                <div class="mockup-title">AI Copilot</div>
                             </div>
-                            <div class="mini-ai-body">
-                                <div class="mini-ai-msg user"><span data-i18n="mock.ai.q1">Explain this nginx error to me</span></div>
-                                <div class="mini-ai-msg bot">
-                                    <i class="bi bi-stars"></i>
-                                    <div>
-                                        <p data-i18n="mock.ai.a1">Your upstream PHP-FPM socket isn't responding. Three likely causes:</p>
-                                        <p class="mini-ai-list">1. <span data-i18n="mock.ai.r1">PHP-FPM crashed (OOM)</span></p>
-                                        <p class="mini-ai-list">2. <span data-i18n="mock.ai.r2">Wrong socket path in nginx.conf</span></p>
-                                        <p class="mini-ai-list">3. <span data-i18n="mock.ai.r3">Permissions on the socket file</span></p>
-                                    </div>
-                                </div>
-                                <div class="mini-ai-msg user"><span data-i18n="mock.ai.q2">Fix the OOM one</span></div>
-                                <div class="mini-ai-msg bot">
-                                    <i class="bi bi-stars"></i>
-                                    <div>
-                                        <code>systemctl restart php-fpm</code>
-                                        <code>sysctl vm.overcommit_memory=1</code>
-                                        <p class="mini-ai-tip" data-i18n="mock.ai.tip">→ Tap to copy or run directly</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="assets/screenshots/mac-ai.png"
+                                 alt="NaviTerm AI Copilot explaining an nginx 502 error and suggesting a fix command"
+                                 class="screenshot-img"
+                                 width="1600" height="1000" loading="lazy">
                         </div>
                         <div class="screenshot-caption">
                             <h4 data-i18n="screenshots.ai.title">Built-in AI Panel</h4>
@@ -778,51 +699,17 @@
                         </div>
                     </div>
 
-                    <!-- Automation engine mockup: matches caption "Visual Automation — Schedule scripts" -->
+                    <!-- Automation engine screenshot -->
                     <div class="screenshot-card">
-                        <div class="mac-mockup mac-mockup-mini">
+                        <div class="screenshot-img-wrap">
                             <div class="mockup-titlebar">
                                 <div class="mockup-traffic"><span></span><span></span><span></span></div>
                                 <div class="mockup-title" data-i18n="mock.auto.title">Automation · Scheduled tasks</div>
                             </div>
-                            <div class="mini-auto-body">
-                                <div class="mini-auto-row mini-auto-head">
-                                    <span class="mini-auto-col-name" data-i18n="mock.auto.h1">Task</span>
-                                    <span class="mini-auto-col-host" data-i18n="mock.auto.h2">Hosts</span>
-                                    <span class="mini-auto-col-cron" data-i18n="mock.auto.h3">Schedule</span>
-                                    <span class="mini-auto-col-status" data-i18n="mock.auto.h4">Status</span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-database-check"></i> <span data-i18n="mock.auto.t1">Backup database</span></span>
-                                    <span class="mini-auto-col-host">3</span>
-                                    <span class="mini-auto-col-cron">0 3 * * *</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill ok" data-i18n="mock.auto.s1">OK</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-heart-pulse"></i> <span data-i18n="mock.auto.t2">Health check</span></span>
-                                    <span class="mini-auto-col-host">12</span>
-                                    <span class="mini-auto-col-cron">*/5 * * * *</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill ok" data-i18n="mock.auto.s1">OK</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-rocket-takeoff"></i> <span data-i18n="mock.auto.t3">Deploy v2.6.9</span></span>
-                                    <span class="mini-auto-col-host">8</span>
-                                    <span class="mini-auto-col-cron" data-i18n="mock.auto.now">now</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill running" data-i18n="mock.auto.s2">running</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-recycle"></i> <span data-i18n="mock.auto.t4">Rotate logs</span></span>
-                                    <span class="mini-auto-col-host">12</span>
-                                    <span class="mini-auto-col-cron">0 0 * * 0</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill scheduled" data-i18n="mock.auto.s3">scheduled</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-search"></i> <span data-i18n="mock.auto.t5">Security audit</span></span>
-                                    <span class="mini-auto-col-host">12</span>
-                                    <span class="mini-auto-col-cron">0 4 * * 1</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill ok" data-i18n="mock.auto.s1">OK</span></span>
-                                </div>
-                            </div>
+                            <img src="assets/screenshots/mac-automation.png"
+                                 alt="NaviTerm automation engine with scheduled tasks across multiple hosts"
+                                 class="screenshot-img"
+                                 width="1600" height="1000" loading="lazy">
                         </div>
                         <div class="screenshot-caption">
                             <h4 data-i18n="screenshots.auto.title">Visual Automation</h4>
@@ -833,155 +720,41 @@
 
                 <!-- iPhone trio: Hosts list / SSH terminal / SFTP browser -->
                 <div class="iphone-trio">
-                    <!-- iPhone home: Hosts list -->
+                    <!-- iPhone home: real screenshot -->
                     <div class="device-iphone device-iphone-tilt-left">
-                        <div class="iphone-screen iphone-home">
-                            <div class="iphone-statusbar">
-                                <span class="ios-time">9:41</span>
-                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
-                            </div>
-                            <div class="iphone-app-header">
-                                <h3 data-i18n="ios.hosts.title">Hosts</h3>
-                                <i class="bi bi-plus-circle-fill"></i>
-                            </div>
-                            <div class="iphone-search">
-                                <i class="bi bi-search"></i>
-                                <span data-i18n="ios.search">Search</span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">P</span>
-                                <div class="ios-host-info">
-                                    <strong>prod-web-01</strong>
-                                    <span>root · 198.51.100.42</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">A</span>
-                                <div class="ios-host-info">
-                                    <strong>api-gateway</strong>
-                                    <span>deploy · 198.51.100.18</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">D</span>
-                                <div class="ios-host-info">
-                                    <strong>db-primary</strong>
-                                    <span>postgres · 10.0.0.5</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</span>
-                                <div class="ios-host-info">
-                                    <strong>staging-app</strong>
-                                    <span>ubuntu · 10.0.0.18</span>
-                                </div>
-                                <span class="host-dot offline"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">B</span>
-                                <div class="ios-host-info">
-                                    <strong>backup-srv</strong>
-                                    <span>backup · 10.0.0.99</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                        </div>
+                        <img src="assets/screenshots/ios-home.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
+                    </div>
+                     <div class="device-iphone device-iphone-tilt-left">
+                        <img src="assets/screenshots/ios-claude.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
 
-                    <!-- iPhone middle: SSH terminal -->
+                    <!-- iPhone SSH terminal: real screenshot -->
                     <div class="device-iphone">
-                        <div class="iphone-screen iphone-terminal">
-                            <div class="iphone-statusbar light">
-                                <span class="ios-time">9:41</span>
-                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
-                            </div>
-                            <div class="iphone-term-header">
-                                <i class="bi bi-chevron-left"></i>
-                                <span class="ios-term-title">root@prod-web-01</span>
-                                <i class="bi bi-stars"></i>
-                            </div>
-                            <div class="iphone-term-body">
-                                <div class="ios-term-line"><span class="prompt">$</span> <span>uptime</span></div>
-                                <div class="ios-term-line out">10:24, up 142d, load: 0.34</div>
-                                <div class="ios-term-line"><span class="prompt">$</span> <span>systemctl status nginx</span></div>
-                                <div class="ios-term-line out">● nginx.service - active (running)</div>
-                                <div class="ios-term-line out ok">  Active: active (running)</div>
-                                <div class="ios-term-line out">  Memory: 24.8M  Tasks: 5</div>
-                                <div class="ios-term-line"><span class="prompt">$</span> <span class="cursor">_</span></div>
-                            </div>
-                            <div class="iphone-term-keys">
-                                <span>esc</span><span>tab</span><span>ctrl</span><span>↑</span><span>↓</span>
-                            </div>
-                        </div>
+                        <img src="assets/screenshots/ios-terminal.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
 
-                    <!-- iPhone right: SFTP file browser -->
+                    <div class="device-iphone">
+                        <img src="assets/screenshots/ios-image.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
+                    </div>
                     <div class="device-iphone device-iphone-tilt-right">
-                        <div class="iphone-screen iphone-sftp">
-                            <div class="iphone-statusbar">
-                                <span class="ios-time">9:41</span>
-                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
-                            </div>
-                            <div class="iphone-sftp-header">
-                                <i class="bi bi-chevron-left"></i>
-                                <span data-i18n="ios.sftp.path">/var/www/app</span>
-                                <i class="bi bi-arrow-up-circle"></i>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-folder-fill folder"></i>
-                                <span class="sftp-name">config</span>
-                                <span class="sftp-meta">drwx — 4 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-folder-fill folder"></i>
-                                <span class="sftp-name">public</span>
-                                <span class="sftp-meta">drwx — 4 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-folder-fill folder"></i>
-                                <span class="sftp-name">storage</span>
-                                <span class="sftp-meta">drwx — 4 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-file-earmark-code-fill code"></i>
-                                <span class="sftp-name">app.js</span>
-                                <span class="sftp-meta">-rw 12 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-file-earmark-text-fill text"></i>
-                                <span class="sftp-name">.env</span>
-                                <span class="sftp-meta">-rw  1 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-file-earmark-zip-fill zip"></i>
-                                <span class="sftp-name">backup.tar.gz</span>
-                                <span class="sftp-meta">-rw 240 MB</span>
-                            </div>
-                            <div class="iphone-sftp-toolbar">
-                                <i class="bi bi-cloud-arrow-up-fill"></i>
-                                <i class="bi bi-cloud-arrow-down-fill"></i>
-                                <i class="bi bi-folder-plus"></i>
-                                <i class="bi bi-trash"></i>
-                            </div>
-                        </div>
+                        <img src="assets/screenshots/ios-chat.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
-                </div>
 
-                <div class="iphone-trio-captions">
-                    <div class="iphone-cap">
-                        <h4 data-i18n="screenshots.iphone.home.title">Hosts at a glance</h4>
-                        <p data-i18n="screenshots.iphone.home.desc">Color-coded host list with live online status, synced from your Mac.</p>
-                    </div>
-                    <div class="iphone-cap">
-                        <h4 data-i18n="screenshots.iphone.term.title">Full SSH in your pocket</h4>
-                        <p data-i18n="screenshots.iphone.term.desc">A real terminal with extra keys, tab completion, and AI assist.</p>
-                    </div>
-                    <div class="iphone-cap">
-                        <h4 data-i18n="screenshots.iphone.sftp.title">SFTP file browser</h4>
-                        <p data-i18n="screenshots.iphone.sftp.desc">Upload, download, edit and preview — drag and drop included.</p>
+                    <!-- iPhone SFTP: real screenshot -->
+                    <div class="device-iphone device-iphone-tilt-right">
+                        <img src="assets/screenshots/ios-sftp.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
                 </div>
             </div>

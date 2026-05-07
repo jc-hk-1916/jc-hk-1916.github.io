@@ -1067,6 +1067,10 @@ body.menu-open .nav {
         justify-content: center;
     }
 
+    .hero-stats {
+        justify-content: center;
+    }
+
     .hero-platforms {
         justify-content: center;
     }
@@ -4135,5 +4139,115 @@ body.menu-open .nav {
         font-size: 0.7rem;
     }
     .mini-auto-col-host, .mini-auto-col-cron { display: none; }
+}
+
+/* ============================================== */
+/* ========= REAL SCREENSHOT STYLES ============= */
+/* Used when CSS mockups are replaced with real   */
+/* screenshots from assets/screenshots/           */
+/* ============================================== */
+
+/* Mac hero screenshot (1600×1000, 16:10) inside the MacBook frame */
+.device-mac-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+/* Mac pair screenshots — AI panel & Automation (1600×1000, 16:10) */
+.screenshot-img-wrap {
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: none;
+    background: #0a0c14;
+}
+
+.screenshot-img-wrap .mockup-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: linear-gradient(180deg, #2a2d38 0%, #20232c 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.screenshot-img-wrap .mockup-title {
+    flex: 1;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.screenshot-img-wrap .mockup-traffic span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.screenshot-img-wrap .mockup-traffic span:nth-child(1) { background: #ff5f57; }
+.screenshot-img-wrap .mockup-traffic span:nth-child(2) { background: #febc2e; }
+.screenshot-img-wrap .mockup-traffic span:nth-child(3) { background: #28c840; }
+
+.screenshot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: #0a0c14;
+}
+
+/* iPhone real screenshots (448×900, 5:10 ≈ 9:18)
+   iOS 截图自带手机外壳，不需要额外的容器样式 */
+.device-iphone {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    width: 170px;
+    aspect-ratio: unset;
+    overflow: visible;
+}
+
+.device-iphone::before {
+    display: none;
+}
+
+.iphone-screen-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.iphone-trio {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .device-mac-img { border-radius: 2px; }
+}
+
+@media (max-width: 768px) {
+    .device-iphone {
+        max-width: 130px;
+    }
+
+    .device-iphone-tilt-left,
+    .device-iphone-tilt-right {
+        transform: rotate(0) translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .device-iphone { max-width: 110px; }
 }
 

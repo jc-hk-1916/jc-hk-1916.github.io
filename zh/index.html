@@ -600,76 +600,14 @@
                     <p class="section-desc">为 macOS、iPadOS 和 iOS 像素级精雕细琢 — 数据同步、操作一致、体验如一，每一台 Apple 设备都熟悉。</p>
                 </div>
 
-                <!-- Mac hero mockup: 主机侧栏 + SSH 终端 + AI 面板 -->
+                <!-- Mac hero: 真实截图 -->
                 <div class="device-mac">
                     <div class="device-mac-frame">
                         <div class="device-mac-camera"></div>
-                        <div class="mac-mockup mac-mockup-hero">
-                            <div class="mockup-titlebar">
-                                <div class="mockup-traffic"><span></span><span></span><span></span></div>
-                                <div class="mockup-title">NaviTerm — 生产环境</div>
-                                <div class="mockup-actions"><i class="bi bi-three-dots"></i></div>
-                            </div>
-                            <div class="mockup-body">
-                                <aside class="mockup-sidebar">
-                                    <div class="mockup-search">
-                                        <i class="bi bi-search"></i>
-                                        <span>筛选主机…</span>
-                                    </div>
-                                    <div class="mockup-section">生产环境</div>
-                                    <div class="mockup-host active">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">P</span>
-                                        <span class="host-name">prod-web-01</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">A</span>
-                                        <span class="host-name">api-gateway</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">D</span>
-                                        <span class="host-name">db-primary</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                    <div class="mockup-section">测试环境</div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</span>
-                                        <span class="host-name">staging-app</span>
-                                        <span class="host-dot offline"></span>
-                                    </div>
-                                    <div class="mockup-host">
-                                        <span class="host-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">B</span>
-                                        <span class="host-name">backup-srv</span>
-                                        <span class="host-dot online"></span>
-                                    </div>
-                                </aside>
-                                <main class="mockup-main">
-                                    <div class="mockup-tabs">
-                                        <span class="mockup-tab active"><span class="mt-dot"></span>root@prod-web-01</span>
-                                        <span class="mockup-tab">root@api-gateway</span>
-                                        <span class="mockup-tab-add">+</span>
-                                    </div>
-                                    <div class="mockup-terminal">
-                                        <div class="mt-row"><span class="prompt">root@prod-web-01</span>:<span class="path">/var/log</span># <span>tail -f nginx/access.log</span></div>
-                                        <div class="mt-row out">10.0.1.42 - "GET /api/users HTTP/2.0" 200 1284</div>
-                                        <div class="mt-row out">10.0.1.18 - "POST /api/orders HTTP/2.0" 201 89</div>
-                                        <div class="mt-row out err">10.0.1.55 - "GET /api/health HTTP/2.0" 502 0</div>
-                                        <div class="mt-row out err">10.0.1.55 - "GET /api/health HTTP/2.0" 502 0</div>
-                                        <div class="mt-row"><span class="prompt">root@prod-web-01</span>:<span class="path">/var/log</span># <span class="ai-suggested">⚡ ai 为啥 502 突然变多？</span></div>
-                                    </div>
-                                </main>
-                                <aside class="mockup-ai">
-                                    <div class="mockup-ai-header">
-                                        <span class="ai-dot"></span>
-                                        <span>AI 助手</span>
-                                    </div>
-                                    <div class="mockup-ai-msg">14:31 出现 php-fpm 内存不足导致 502 飙升，建议执行：</div>
-                                    <code class="mockup-ai-code">systemctl restart php-fpm</code>
-                                    <div class="mockup-ai-btn"><i class="bi bi-play-fill"></i> <span>运行命令</span></div>
-                                </aside>
-                            </div>
-                        </div>
+                        <img src="../assets/screenshots/mac-hero.jpg"
+                             alt="NaviTerm macOS 界面 — 主机侧栏、多标签 SSH 终端和 AI 助手面板并排显示"
+                             class="device-mac-img"
+                             width="1600" height="1000" loading="lazy">
                     </div>
                     <div class="device-mac-base"></div>
                     <div class="device-mac-stand"></div>
@@ -678,34 +616,17 @@
 
                 <!-- Mac feature pair: AI 面板 + 自动化引擎 -->
                 <div class="screenshot-pair">
-                    <!-- AI 面板 mockup -->
+                    <!-- AI 面板真实截图 -->
                     <div class="screenshot-card">
-                        <div class="mac-mockup mac-mockup-mini">
+                        <div class="screenshot-img-wrap">
                             <div class="mockup-titlebar">
                                 <div class="mockup-traffic"><span></span><span></span><span></span></div>
-                                <div class="mockup-title">AI 助手 · Claude</div>
+                                <div class="mockup-title">AI 助手</div>
                             </div>
-                            <div class="mini-ai-body">
-                                <div class="mini-ai-msg user"><span>帮我解释下这个 nginx 报错</span></div>
-                                <div class="mini-ai-msg bot">
-                                    <i class="bi bi-stars"></i>
-                                    <div>
-                                        <p>上游 PHP-FPM socket 没响应，常见三个原因：</p>
-                                        <p class="mini-ai-list">1. PHP-FPM 因内存不足崩溃</p>
-                                        <p class="mini-ai-list">2. nginx.conf 中的 socket 路径写错</p>
-                                        <p class="mini-ai-list">3. socket 文件权限不对</p>
-                                    </div>
-                                </div>
-                                <div class="mini-ai-msg user"><span>修第一个</span></div>
-                                <div class="mini-ai-msg bot">
-                                    <i class="bi bi-stars"></i>
-                                    <div>
-                                        <code>systemctl restart php-fpm</code>
-                                        <code>sysctl vm.overcommit_memory=1</code>
-                                        <p class="mini-ai-tip">→ 点击直接复制或运行</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="../assets/screenshots/mac-ai.png"
+                                 alt="NaviTerm AI 助手解释 nginx 502 错误并给出修复命令"
+                                 class="screenshot-img"
+                                 width="1600" height="1000" loading="lazy">
                         </div>
                         <div class="screenshot-caption">
                             <h4>内置 AI 面板</h4>
@@ -713,51 +634,17 @@
                         </div>
                     </div>
 
-                    <!-- 自动化 mockup -->
+                    <!-- 自动化真实截图 -->
                     <div class="screenshot-card">
-                        <div class="mac-mockup mac-mockup-mini">
+                        <div class="screenshot-img-wrap">
                             <div class="mockup-titlebar">
                                 <div class="mockup-traffic"><span></span><span></span><span></span></div>
                                 <div class="mockup-title">自动化 · 定时任务</div>
                             </div>
-                            <div class="mini-auto-body">
-                                <div class="mini-auto-row mini-auto-head">
-                                    <span class="mini-auto-col-name">任务</span>
-                                    <span class="mini-auto-col-host">主机数</span>
-                                    <span class="mini-auto-col-cron">调度</span>
-                                    <span class="mini-auto-col-status">状态</span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-database-check"></i> <span>数据库备份</span></span>
-                                    <span class="mini-auto-col-host">3</span>
-                                    <span class="mini-auto-col-cron">0 3 * * *</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill ok">正常</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-heart-pulse"></i> <span>健康检查</span></span>
-                                    <span class="mini-auto-col-host">12</span>
-                                    <span class="mini-auto-col-cron">*/5 * * * *</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill ok">正常</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-rocket-takeoff"></i> <span>部署 v2.6.9</span></span>
-                                    <span class="mini-auto-col-host">8</span>
-                                    <span class="mini-auto-col-cron">即时</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill running">运行中</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-recycle"></i> <span>日志轮转</span></span>
-                                    <span class="mini-auto-col-host">12</span>
-                                    <span class="mini-auto-col-cron">0 0 * * 0</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill scheduled">待运行</span></span>
-                                </div>
-                                <div class="mini-auto-row">
-                                    <span class="mini-auto-col-name"><i class="bi bi-search"></i> <span>安全审计</span></span>
-                                    <span class="mini-auto-col-host">12</span>
-                                    <span class="mini-auto-col-cron">0 4 * * 1</span>
-                                    <span class="mini-auto-col-status"><span class="status-pill ok">正常</span></span>
-                                </div>
-                            </div>
+                            <img src="../assets/screenshots/mac-automation.png"
+                                 alt="NaviTerm 自动化引擎，定时任务跨多台服务器运行"
+                                 class="screenshot-img"
+                                 width="1600" height="1000" loading="lazy">
                         </div>
                         <div class="screenshot-caption">
                             <h4>可视化自动化</h4>
@@ -768,155 +655,40 @@
 
                 <!-- iPhone trio: 主机列表 / SSH 终端 / SFTP 浏览器 -->
                 <div class="iphone-trio">
-                    <!-- iPhone 主页：主机列表 -->
+                    <!-- iPhone 主页：主机列表 — 真实截图 -->
                     <div class="device-iphone device-iphone-tilt-left">
-                        <div class="iphone-screen iphone-home">
-                            <div class="iphone-statusbar">
-                                <span class="ios-time">9:41</span>
-                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
-                            </div>
-                            <div class="iphone-app-header">
-                                <h3>主机</h3>
-                                <i class="bi bi-plus-circle-fill"></i>
-                            </div>
-                            <div class="iphone-search">
-                                <i class="bi bi-search"></i>
-                                <span>搜索</span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">P</span>
-                                <div class="ios-host-info">
-                                    <strong>prod-web-01</strong>
-                                    <span>root · 198.51.100.42</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">A</span>
-                                <div class="ios-host-info">
-                                    <strong>api-gateway</strong>
-                                    <span>deploy · 198.51.100.18</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">D</span>
-                                <div class="ios-host-info">
-                                    <strong>db-primary</strong>
-                                    <span>postgres · 10.0.0.5</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</span>
-                                <div class="ios-host-info">
-                                    <strong>staging-app</strong>
-                                    <span>ubuntu · 10.0.0.18</span>
-                                </div>
-                                <span class="host-dot offline"></span>
-                            </div>
-                            <div class="iphone-host-row">
-                                <span class="ios-host-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">B</span>
-                                <div class="ios-host-info">
-                                    <strong>backup-srv</strong>
-                                    <span>backup · 10.0.0.99</span>
-                                </div>
-                                <span class="host-dot online"></span>
-                            </div>
-                        </div>
+                        <img src="../assets/screenshots/ios-home.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
-
-                    <!-- iPhone 中间：SSH 终端 -->
+                     <div class="device-iphone device-iphone-tilt-left">
+                        <img src="../assets/screenshots/ios-claude.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
+                    </div>
+                    <!-- iPhone SSH 终端：真实截图 -->
                     <div class="device-iphone">
-                        <div class="iphone-screen iphone-terminal">
-                            <div class="iphone-statusbar light">
-                                <span class="ios-time">9:41</span>
-                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
-                            </div>
-                            <div class="iphone-term-header">
-                                <i class="bi bi-chevron-left"></i>
-                                <span class="ios-term-title">root@prod-web-01</span>
-                                <i class="bi bi-stars"></i>
-                            </div>
-                            <div class="iphone-term-body">
-                                <div class="ios-term-line"><span class="prompt">$</span> <span>uptime</span></div>
-                                <div class="ios-term-line out">10:24, up 142d, load: 0.34</div>
-                                <div class="ios-term-line"><span class="prompt">$</span> <span>systemctl status nginx</span></div>
-                                <div class="ios-term-line out">● nginx.service - active (running)</div>
-                                <div class="ios-term-line out ok">  Active: active (running)</div>
-                                <div class="ios-term-line out">  Memory: 24.8M  Tasks: 5</div>
-                                <div class="ios-term-line"><span class="prompt">$</span> <span class="cursor">_</span></div>
-                            </div>
-                            <div class="iphone-term-keys">
-                                <span>esc</span><span>tab</span><span>ctrl</span><span>↑</span><span>↓</span>
-                            </div>
-                        </div>
+                        <img src="../assets/screenshots/ios-terminal.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
 
-                    <!-- iPhone 右边：SFTP 文件浏览器 -->
+                    <div class="device-iphone">
+                        <img src="../assets/screenshots/ios-image.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
+                    </div>
                     <div class="device-iphone device-iphone-tilt-right">
-                        <div class="iphone-screen iphone-sftp">
-                            <div class="iphone-statusbar">
-                                <span class="ios-time">9:41</span>
-                                <span class="ios-icons"><i class="bi bi-reception-4"></i><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span>
-                            </div>
-                            <div class="iphone-sftp-header">
-                                <i class="bi bi-chevron-left"></i>
-                                <span>/var/www/app</span>
-                                <i class="bi bi-arrow-up-circle"></i>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-folder-fill folder"></i>
-                                <span class="sftp-name">config</span>
-                                <span class="sftp-meta">drwx — 4 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-folder-fill folder"></i>
-                                <span class="sftp-name">public</span>
-                                <span class="sftp-meta">drwx — 4 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-folder-fill folder"></i>
-                                <span class="sftp-name">storage</span>
-                                <span class="sftp-meta">drwx — 4 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-file-earmark-code-fill code"></i>
-                                <span class="sftp-name">app.js</span>
-                                <span class="sftp-meta">-rw 12 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-file-earmark-text-fill text"></i>
-                                <span class="sftp-name">.env</span>
-                                <span class="sftp-meta">-rw  1 KB</span>
-                            </div>
-                            <div class="iphone-sftp-row">
-                                <i class="bi bi-file-earmark-zip-fill zip"></i>
-                                <span class="sftp-name">backup.tar.gz</span>
-                                <span class="sftp-meta">-rw 240 MB</span>
-                            </div>
-                            <div class="iphone-sftp-toolbar">
-                                <i class="bi bi-cloud-arrow-up-fill"></i>
-                                <i class="bi bi-cloud-arrow-down-fill"></i>
-                                <i class="bi bi-folder-plus"></i>
-                                <i class="bi bi-trash"></i>
-                            </div>
-                        </div>
+                        <img src="../assets/screenshots/ios-chat.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
-                </div>
 
-                <div class="iphone-trio-captions">
-                    <div class="iphone-cap">
-                        <h4>主机一览</h4>
-                        <p>带颜色标识的主机列表与实时在线状态，自动从 Mac 同步。</p>
-                    </div>
-                    <div class="iphone-cap">
-                        <h4>口袋里的完整 SSH</h4>
-                        <p>真实终端，外加扩展按键、命令补全和 AI 辅助。</p>
-                    </div>
-                    <div class="iphone-cap">
-                        <h4>SFTP 文件浏览器</h4>
-                        <p>上传、下载、编辑、预览一应俱全，支持拖放。</p>
+                    <!-- iPhone SFTP：真实截图 -->
+                    <div class="device-iphone device-iphone-tilt-right">
+                        <img src="../assets/screenshots/ios-sftp.png"
+                             class="iphone-screen-img"
+                             width="448" height="900" loading="lazy">
                     </div>
                 </div>
             </div>
