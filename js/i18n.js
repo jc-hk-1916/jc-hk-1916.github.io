@@ -9,6 +9,7 @@ const translations = {
         'nav.download': 'Download',
         'nav.cta': 'Get NaviTerm Free',
         'nav.switchLang': '切换到中文',
+        'region.cn': 'Mainland China App Store',
 
         'hero.eyebrow': 'New · AI Copilot built-in · Lifetime $29.99',
         'hero.title1': 'The AI-powered',
@@ -356,6 +357,7 @@ const translations = {
         'nav.download': '下载',
         'nav.cta': '免费获取 NaviTerm',
         'nav.switchLang': 'Switch to English',
+        'region.cn': '中国大陆 App Store',
 
         'hero.eyebrow': '全新 · 内置 AI 助手 · 终身买断 $29.99',
         'hero.title1': '集成 AI 助手的',
